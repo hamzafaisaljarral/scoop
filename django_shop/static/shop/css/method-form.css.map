@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/method-form.css",
+	"sources": [
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/method-form.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACC,IADG,CAAA,AAAA,gBAAC,AAAA,EACJ,kBAAkB,CAAC;EAClB,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,IAAI,GAIZ;EAPF,AAIE,IAJE,CAAA,AAAA,gBAAC,AAAA,EACJ,kBAAkB,CAGjB,CAAC,CAAC;IACD,WAAW,EAAE,IAAI,GACjB"
+}

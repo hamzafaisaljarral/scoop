@@ -1,0 +1,125 @@
+
+{% load i18n static sass_tags sekizai_tags shop_tags %}
+{% addtoblock "css" %}<link href="{% sass_src 'myshop/css/default.scss' %}" rel="stylesheet" type="text/css" />{% endaddtoblock %}
+{% addtoblock "js" %}<script src="{% static 'shop/js/filter-form.js' %}" type="text/javascript"></script>{% endaddtoblock %}
+{% add_data "ng-requires" "django.shop.filter" %}
+{% addtoblock "css" %}<link href="css/bootstrap.min.css" rel="stylesheet">{% endaddtoblock %}
+
+{% block form-content %}
+<!--
+<form shop-product-filter="manufacturer" style="margin-bottom: 10px;">
+	{{ filter.filter_set.form.as_div }}
+</form>
+
+<form name="{{ create_scoop }}" djng-endpoint="{% url 'shop:scoop-new-scoop' %" role="form" novalidate>
+
+
+	<div class="form-group has-feedback" style="margin-bottom: 20px">
+		<span class="help-block">{{create_scoop.product_name}}</span>
+		<input id="your_product_name" type="text" name="your product" value="{{create_scoop.product_name}}">
+	</div>
+
+	<div class="form-group">
+		{{ create_scoop.caption }}
+		<span class="help-block">enter caption</span>
+		<input id="your_caption" type="text" name="your caption" value="{{create_scoop.caption}}">
+	</div>
+		<div class="form-group">
+		{{ create_scoop.product_code }}
+		<span class="help-block">enter time duration</span>
+
+		<input id="your_product_code" type="text" name="your product" value="{{create_scoop.product_code}}">
+	</div>
+
+
+
+		<div class="form-group">
+		{{ create_scoop.unit_price }}
+		<span class="help-block">enter price</span>
+			<input id="your_product_price" type="text" name="your price" value="{{create_scoop.unit_price}}">
+	</div>
+
+		<div class="form-group">
+		{{ create_scoop.active }}
+			<span class="help-block">Activate</span>
+		<input id="your_product_active" type="radio" name="active" value="{{create_scoop.active}}" checked> yes<br>
+			<input id="your_product_active_no" type="radio" name="active" value="{{create_scoop.active}}" checked> No<br>
+	</div>
+
+	<div class="form-group">
+		<label class="custom-file">
+       <input type="file" id="file" class="custom-file-input">
+       <span class="custom-file-control"></span>
+   </label>
+
+	</div>
+
+</form>
+-->
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Product Name</label>
+      <input type="product_name" class="form-control" id="inputEmail4" placeholder="Product name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Product Code</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Product Code">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Caption</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Type Scoop Caption">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Description</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Description of Scoop">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Slug</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Category</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>Art and Craft</option>
+		  <option>Style & Fashion</option>
+		  <option> Events & Lifestyle</option>
+		  <option> Audio & Video </option>
+		  <option> Design & Animation </option>
+          <option> Food & Drinks</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Unit Price</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+             Active
+      </label>
+    </div>
+  </div>
+
+	<div class="form-group">
+		<label class="custom-file">
+       <input type="file" id="file" class="custom-file-input">
+       <span class="custom-file-control"></span>
+   </label>
+
+	</div>
+  <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
+</form>
+
+  {% addtoblock "js" %}<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>{% endaddtoblock %}
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    {% addtoblock "js" %}<script src="js/bootstrap.min.js"></script>{% endaddtoblock %}
+{% endblock form-content %}
+
+

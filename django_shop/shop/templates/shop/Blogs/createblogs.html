@@ -1,0 +1,11 @@
+{% load cms_tags i18n %}
+{% page_url "new-blogs" as create_blogs_url %}
+{% if create_blogs_url %}
+    {% page_attribute 'menu_title' 'new-blogs' as tooltip %}
+{% else %}
+    {% url "new-blogs" as create_blogs_url %}
+    {% trans "Create Blog" as tooltip %}
+{% endif %}
+{% if create_blogs_url %}
+<li><a href="{{ create_blogs_url }}" title="{{ tooltip }}"><button type="button" class="btn btn-success" uib-tooltip="{{ tooltip }}">Create Blog </button></a></li>
+{% endif %}

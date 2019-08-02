@@ -1,0 +1,93 @@
+{% extends "myshop/catalog/product-detail.html" %}
+{% load i18n cms_tags thumbnail %}
+{% load static cms_tags sekizai_tags djng_tags i18n %}
+
+
+
+{% addtoblock "css" %}<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>{% endaddtoblock %}
+{% addtoblock "css" %}<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>{% endaddtoblock %}
+{% addtoblock "css" %}<link rel='stylesheet' href='https://raw.githubusercontent.com/kartik-v/bootstrap-star-rating/master/css/star-rating.min.css'>{% endaddtoblock %}
+
+
+{% addtoblock "js" %}<script  type="text/javascript" src="{% static 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'%}"></script>{% endaddtoblock %}
+
+
+
+
+
+{% block main-content %}
+<div class="container">
+	<div class="row product-detail">
+		<div class="col-xs-12 col-md-8">
+			<h1>{% render_model product "product_name" %}</h1>
+			<pre class="images">
+			{% for img in product.images.all %}
+				{% thumbnail img 250x250 crop as thumb %}
+				<img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ product.product_name }}">
+			{% endfor %}
+			</pre>
+		</div>
+		<div class="col-xs-12 col-md-8">
+			{{ product.description|safe }}
+			<table class="table table-bordered">
+				<tbody class="table-striped">
+					<tr>
+						<td>{% trans "Time Duration" %}</td>
+						<td>{{ product.time_duration }} Days</td>
+					</tr>
+
+					<tr>
+						<td>{% trans "Manufacturer" %}</td>
+						<td>{{ product.manufacturer }}</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+			<table class="leaflet-control-layers-list">
+
+
+				<tr>
+				  <td>
+                         <a href="https://localhost:8000/contact-us/" type="button" class="btn btn-success">Contact us</a>
+				  </td>
+				</tr>
+
+			</table>
+			<div class="container">
+                 <div class="row">
+                    <div class="col-lg-12">
+                       <div class="star-rating" id="star-rating">
+                           <span class="fa fa-star-o"  data-rating="1"></span>
+                           <span class="fa fa-star-o"   data-rating="2"></span>
+                           <span class="fa fa-star-o" data-rating="3"></span>
+						   <span class="fa fa-star-o" data-rating="4"></span>
+                          <span class="fa fa-star-o" data-rating="5"></span>
+                          <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                       </div>
+					</div>
+                  </div>
+
+             </div>
+
+
+			<!-- include "Add to Cart" dialog box -->
+			{% include "shop/catalog/product-add2cart.html" %}
+			{% include "shop/comment/displaycomment.html" %}
+
+
+
+		</div>
+	</div>
+
+
+</div>
+{% endblock main-content %}
+
+
+
+
+
+
+
+

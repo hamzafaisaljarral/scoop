@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/order.css",
+	"sources": [
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/order.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACC,KADI,CACJ,qBAAqB,CAAC;EACrB,KAAK,EAAE,GAAG,GACV"
+}

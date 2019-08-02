@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/product-gallery.css",
+	"sources": [
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/product-gallery.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/_product-figure.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/_variables.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/example/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACC,eADc,CACd,EAAE,CAAC;EACF,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,GAAG;EACZ,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,MAAM;EAClB,eAAe,EAAE,IAAI;EACrB,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,gBAAgB,GAU5B;EAnBF,AAWE,eAXa,CACd,EAAE,CAUD,EAAE,CAAC;IACF,OAAO,EAAE,YAAY;IACrB,MAAM,EAAE,SAAS;IACjB,KAAK,EAAE,KAAK;IACZ,QAAQ,EAAE,IAAI;IACd,WAAW,EAAE,OAAO,GAEpB;IAlBH,ACEA,eDFe,CACd,EAAE,CAUD,EAAE,CCTJ,MAAM,CAAC;MACN,MAAM,EAAE,GAAG,CAAC,KAAK,CEmqBc,IAAI;MFlqBnC,aAAa,EEyGc,GAAG;MFxG9B,OAAO,EAAE,IAAI;MAWb,UAAU,EAAE,KAAK,GACjB;MDjBD,ACMC,eDNc,CACd,EAAE,CAUD,EAAE,CCTJ,MAAM,CAIL,CAAC,AAAA,MAAM,EDNR,ACMU,eDNK,CACd,EAAE,CAUD,EAAE,CCTJ,MAAM,CAII,CAAC,AAAA,OAAO,CAAC;QACjB,eAAe,EAAE,IAAI,GACrB;MDRF,ACSC,eDTc,CACd,EAAE,CAUD,EAAE,CCTJ,MAAM,CAOL,EAAE,CAAC;QACF,UAAU,EAAE,IAAI,GAChB;MDXF,ACYC,eDZc,CACd,EAAE,CAUD,EAAE,CCTJ,MAAM,CAUL,UAAU,CAAC;QACV,UAAU,EAAE,GAAG;QACf,UAAU,EAAE,IAAI,GAChB"
+}

@@ -1,0 +1,26 @@
+
+{% load i18n static sass_tags sekizai_tags shop_tags %}
+
+
+
+
+
+{% block form-content %}
+
+<form shop-product-filter="manufacturer" style="margin-bottom: 10px;">
+	{{ filter.filter_set.form.as_div }}
+</form>
+
+<form name="{{ create_scoop }}" djng-endpoint="{% url 'shop:scoop-new-scoop' %" role="form" novalidate>
+
+
+	<div class="form-group">
+		<iframe width="420" height="345" align="center" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+
+	</div>
+
+</form>
+{% endblock form-content %}
+
+

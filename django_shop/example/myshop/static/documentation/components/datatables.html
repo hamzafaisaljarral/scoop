@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Datatables - Front Documentation | Front - Responsive Website Template</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.css">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="../../assets/css/front.css">
+
+  <!-- CSS Front Doc -->
+  <link rel="stylesheet" href="../assets/css/starter.css">
+</head>
+
+<body>
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <style type="text/css">
+    p {
+      color: #1e2022;
+    }
+  </style>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header u-header--sticky-top">
+    <div class="u-header__section bg-dark u-header--white-nav-links">
+      <div class="container-fluid">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-top-space" href="../index.html" aria-label="Front">
+            <img src="../../assets/svg/logos/logo-white.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn fd-header-toggle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav navbar-expand-md w-100 u-header__navbar-nav">
+              <!-- Live Preview -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="../../html/home/index.html">Live Preview</a>
+              </li>
+              <!-- End Live Preview -->
+
+              <!-- Starter -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="../../starter/index.html">Starter</a>
+              </li>
+              <!-- End Starter -->
+
+              <!-- Contact Us -->
+              <li class="nav-item u-header__nav-item">
+                <a class="nav-link u-header__nav-link" href="mailto:support@htmlstream.com">Contact Us</a>
+              </li>
+              <!-- End Contact Us -->
+
+              <!-- Changelog -->
+              <li class="nav-item hs-has-mega-menu d-none d-lg-inline-block u-header__nav-item position-relative ml-lg-auto"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">
+                <a id="changelogMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  v1.3
+                  <span class="fa fa-angle-down u-header__nav-link-icon ml-2"></span>
+                </a>
+
+                <!-- Submenu -->
+                <ul class="hs-mega-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y" style="min-width: 220px;"
+                    aria-labelledby="changelogMenu">
+                  <li class="dropdown-item px-0">
+                    <a class="nav-link u-list__link px-4" href="../getting-started/changelog.html#version1_3">v1.3</a>
+                    <a class="nav-link u-list__link px-4" href="../getting-started/changelog.html#version1_2">v1.2</a>
+                    <a class="nav-link u-list__link px-4" href="../getting-started/changelog.html#version1_1">v1.1</a>
+                    <a class="nav-link u-list__link px-4" href="../getting-started/changelog.html#initial-release">v1.0</a>
+                  </li>
+                </ul>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Changelog -->
+
+              <!-- Social Icons -->
+              <li class="ml-md-auto ml-lg-0">
+                <ul class="list-inline mb-5 mb-md-0 pt-3 pt-md-0">
+                  <li class="list-inline-item mx-0">
+                    <a class="u-bg-transparent u-icon u-icon-light--air" href="https://www.facebook.com/htmlstream" target="_blank">
+                      <span class="fab fa-facebook-f u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-bg-transparent u-icon u-icon-light--air" href="https://twitter.com/htmlstream" target="_blank">
+                      <span class="fab fa-twitter u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-bg-transparent u-icon u-icon-light--air" href="https://github.com/htmlstream" target="_blank">
+                      <span class="fab fa-github u-icon__inner"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-0">
+                    <a class="u-bg-transparent u-icon u-icon-light--air" href="https://dribbble.com/htmlstream" target="_blank">
+                      <span class="fab fa-dribbble u-icon__inner"></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Social Icons -->
+
+              <!-- Button -->
+              <li class="nav-item pl-md-3">
+                <a class="btn btn-white u-btn-white btn-sm transition-3d-hover" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/" target="_blank">
+                  Buy Now
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <!-- ========== LEFT ========== -->
+      <div class="col-12 col-md-3 col-xl-2 fd-sidebar">
+        <!-- Sidebar Search -->
+        <form class="fd-search d-flex align-items-center">
+          <input id="fd-sidebar-navigation__search-autocomplete" class="form-control form-control-sm" type="text" placeholder="Search..." data-url="../assets/include/ajax/autocomplete-data-for-documentation-search.json">
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link fd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                  data-toggle="collapse"
+                  data-target="#navside-accordion"
+                  aria-controls="navside-accordion"
+                  aria-expanded="false"
+                  aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <title>Menu</title>
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </form>
+        <!-- End Sidebar Search -->
+
+        <!-- Sidebar Nav -->
+        <nav id="navside-accordion" class="fd-navside collapse">
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#getting-started" aria-expanded="true" aria-controls="getting-started" href="javascript:;">Getting started</a>
+
+            <ul id="getting-started" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../index.html">Introduction</a></li>
+              <li><a href="../getting-started/file-structures.html">File structures</a></li>
+              <li><a href="../getting-started/gulp.html">Gulp</a></li>
+              <li><a href="../getting-started/credits.html">Credits</a></li>
+              <li><a href="../getting-started/update.html">Update</a></li>
+              <li><a href="../getting-started/changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title collapsed" data-toggle="collapse" data-target="#components" aria-expanded="true" aria-controls="components" href="javascript:;">Components</a>
+
+            <ul id="components" class="fd-navside__links collapse show" data-parent="#navside-accordion">
+              <li><a href="typography.html">Typography</a></li>
+              <li><a href="alerts.html">Alerts</a></li>
+              <li><a href="animations.html">Animations</a></li>
+              <li><a href="avatars.html">Avatars</a></li>
+              <li><a href="badge.html">Badge</a></li>
+              <li><a href="bg-video.html">Background Video</a></li>
+              <li><a href="breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="charts.html">Charts</a></li>
+              <li><a href="circles.html">Circles (Pir Chart)</a></li>
+              <li><a href="collapse.html">Collapse</a></li>
+              <li><a href="countdown.html">Countdown</a></li>
+              <li><a href="counters.html">Counters</a></li>
+              <li><a href="cubeportfolio.html">Cubeportfolio</a></li>
+              <li><a class="active" href="datatables.html">Datatables</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="unfold.html">Unfold (Dropdown and others)</a></li>
+              <li><a href="fancybox.html">Fancybox</a></li>
+              <li><a href="flatpickr.html">Flatpickr</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="input-group.html">Input Groups</a></li>
+              <li><a href="google-map.html">Google Map</a></li>
+              <li><a href="go-to.html">Go to</a></li>
+              <li><a href="headers.html">Headers</a></li>
+              <li><a href="header-mega-menu.html">Header Mega Menu</a></li>
+              <li><a href="header-fullscreen.html">Header Fullscreen</a></li>
+              <li><a href="header-searches.html">Header Searches</a></li>
+              <li><a href="header-shopping-carts.html">Header Shopping Carts</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="labels.html">Label</a></li>
+              <li><a href="list.html">List</a></li>
+              <li><a href="malihu-scrollbar.html">Malihu Scrollbar</a></li>
+              <li><a href="modal-window.html">Modal Window</a></li>
+              <li><a href="pagination.html">Pagination</a></li>
+              <li><a href="parallax.html">Parallax</a></li>
+              <li><a href="progress.html">Progress</a></li>
+              <li><a href="scroll-effect.html">Scroll Effect</a></li>
+              <li><a href="scroll-nav.html">Scroll Nav</a></li>
+              <li><a href="select.html">Select</a></li>
+              <li><a href="show-animation.html">Show Animation</a></li>
+              <li><a href="skippy.html">Skippy</a></li>
+              <li><a href="slick-carousel.html">Slick Carousel</a></li>
+              <li><a href="social-apis.html">Social APIs</a></li>
+              <li><a href="sticky-block.html">Sticky Block</a></li>
+              <li><a href="sticky-footer.html">Sticky Footer</a></li>
+              <li><a href="summernote.html">Summernote WYSIWYG Editor</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tagsinput.html">Tagsinput</a></li>
+              <li><a href="toggle-state.html">Toggle state</a></li><li><a href="typedjs.html">Typedjs</a></li>
+              <li><a href="validation.html">Validation</a></li>
+              <li><a href="video-player.html">Video Player</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#utilities" aria-expanded="true" aria-controls="utilities" href="javascript:;">Utilities</a>
+
+            <ul id="utilities" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../utilities/borders.html">Borders</a></li>
+              <li><a href="../utilities/colors.html">Colors</a></li>
+              <li><a href="../utilities/content-alignments.html">Content Alignments (with Position)</a></li>
+              <li><a href="../utilities/links.html">Links</a></li>
+              <li><a href="../utilities/position.html">Position</a></li>
+              <li><a href="../utilities/sizing.html">Sizing</a></li>
+              <li><a href="../utilities/shadows.html">Shadows</a></li>
+              <li><a href="../utilities/spacing.html">Spacing</a></li>
+              <li><a href="../utilities/transitions.html">Transitions</a></li>
+              <li><a href="../utilities/others.html">Others</a></li>
+            </ul>
+          </div>
+
+          <div class="fd-navside__block">
+            <a class="fd-navside__title" data-toggle="collapse" data-target="#customization" aria-expanded="true" aria-controls="customization" href="javascript:;">Customization</a>
+
+            <ul id="customization" class="fd-navside__links collapse" data-parent="#navside-accordion">
+              <li><a href="../customization/css.html">CSS</a></li>
+              <li><a href="../customization/sass.html">SASS</a></li>
+              <li><a href="../customization/bootstrap-sass.html">Bootstrap SASS</a></li>
+              <li><a href="../customization/js.html">JavaScript</a></li>
+              <li><a href="../customization/typography.html">Typography</a></li>
+              <li><a href="../customization/colors.html">Colors</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Sidebar Nav -->
+      </div>
+      <!-- ========== END LEFT ========== -->
+
+      <!-- ========== RIGHT ========== -->
+      <div class="d-none d-xl-block col-xl-2 fd-toc">
+        <ul id="scrollNav" class="fd-toc-section-nav">
+          <li class="fd-toc-entry active"><a href="#how-to-use">How to use?</a></li>
+          <li class="fd-toc-entry"><a href="#basic-example">Basic example</a></li>
+          <li class="fd-toc-entry"><a href="#with-pagination">With pagination</a></li>
+          <li class="fd-toc-entry"><a href="#with-search">With search</a></li>
+          <li class="fd-toc-entry">
+            <a href="#js-behavior">JavaScript behavior</a>
+            <ul>
+              <li class="fd-toc-entry"><a href="#methods">Methods</a></li>
+            </ul>
+          </li>
+          <li class="fd-toc-entry"><a href="#official-documentation">Official documentation</a></li>
+        </ul>
+      </div>
+      <!-- ========== END RIGHT ========== -->
+
+      <!-- ========== MAIN ========== -->
+      <main class="col-12 col-md-9 col-xl-8 pl-md-5 fd-content u-space-3" role="main">
+        <div class="mb-9">
+          <h1 class="font-weight-bold">Datatables</h1>
+          <p class="lead font-weight-normal">A highly flexible tool, build upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.</p>
+        </div>
+
+        <div id="how-to-use" class="mb-9">
+          <h2 class="h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>To add <code class="highlighter-rouge">hs.datatables.js</code> in your page, wrap any block in a parent element with an ID or class and add the same ID or the class in the JS init function of the plugin.</p>
+
+          <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script src="assets/vendor/datatables/media/js/jquery.dataTables.min.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the following <code class="highlighter-rouge">&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script src="assets/js/components/hs.datatables.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+          <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable it.</p>
+
+          <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of datatables
+                  $.HSCore.components.HSDatatables.init('.js-datatable');
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+
+        <div id="basic-example" class="mb-9">
+          <h2 class="h4">Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example">
+            <!-- Basic Table -->
+            <div class="table-responsive-md u-datatable">
+              <table class="js-datatable table">
+                <thead>
+                  <tr class="text-uppercase font-size-14">
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Order
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Client
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Amount
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Date
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Status
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="font-size-14">
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR001</td>
+                    <td class="align-middle">Spotify</td>
+                    <td class="align-middle text-primary">$9.00</td>
+                    <td class="align-middle text-secondary">05 May</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR002</td>
+                    <td class="align-middle">Dropbox</td>
+                    <td class="align-middle text-primary">$257.93</td>
+                    <td class="align-middle text-secondary">12 May</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR003</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle text-primary">$441.99</td>
+                    <td class="align-middle text-secondary">15 May</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR004</td>
+                    <td class="align-middle">FrontApp</td>
+                    <td class="align-middle text-primary">$99.00</td>
+                    <td class="align-middle text-secondary">01 Jun</td>
+                    <td class="align-middle text-warning">Pending</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR005</td>
+                    <td class="align-middle">Slack</td>
+                    <td class="align-middle text-primary">$14.89</td>
+                    <td class="align-middle text-secondary">02 Jun</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR006</td>
+                    <td class="align-middle">Spotify</td>
+                    <td class="align-middle text-primary">$9.00</td>
+                    <td class="align-middle text-secondary">05 Jun</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR007</td>
+                    <td class="align-middle">Htmlstream</td>
+                    <td class="align-middle text-primary">$1,579.99</td>
+                    <td class="align-middle text-secondary">15 Jun</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR008</td>
+                    <td class="align-middle">GitHub</td>
+                    <td class="align-middle text-primary">$235.85</td>
+                    <td class="align-middle text-secondary">16 Apr</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR009</td>
+                    <td class="align-middle">Dropbox</td>
+                    <td class="align-middle text-primary">$12.31</td>
+                    <td class="align-middle text-secondary">12 Apr</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR0010</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle text-primary">$891.00</td>
+                    <td class="align-middle text-secondary">29 Apr</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Basic Table -->
+          </div>
+
+          <div style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- Basic Table --&gt;
+                &lt;div class="table-responsive-md u-datatable"&gt;
+                  &lt;table class="js-datatable table"&gt;
+                    &lt;thead&gt;
+                      &lt;tr class="text-uppercase font-size-14"&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Order
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Client
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Amount
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Date
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Status
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody class="font-size-14"&gt;
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR001&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Spotify&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$9.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;05 May&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR002&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Dropbox&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$257.93&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;12 May&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR003&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Google&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$441.99&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;15 May&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR004&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;FrontApp&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$99.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;01 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-warning"&gt;Pending&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR005&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Slack&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$14.89&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;02 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR006&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Spotify&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$9.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;05 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR007&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Htmlstream&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$1,579.99&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;15 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR008&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;GitHub&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$235.85&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;16 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR009&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Dropbox&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$12.31&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;12 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR0010&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Google&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$891.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;29 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;!-- End Basic Table --&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div id="with-pagination" class="mb-9">
+          <h2 class="h4">With pagination <a class="anchorjs-link" href="#with-pagination" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example">
+            <!-- With Pagination Table -->
+            <div class="table-responsive-md u-datatable">
+              <table class="js-datatable table"
+                     data-dt-info="#datatableWithPaginationInfo"
+                     data-dt-page-length="4"
+                     data-dt-is-show-paging="true"
+
+                     data-dt-pagination="datatableWithPagination"
+                     data-dt-pagination-classes="pagination mb-0"
+                     data-dt-pagination-items-classes="page-item"
+                     data-dt-pagination-links-classes="page-link"
+
+                     data-dt-pagination-next-classes="page-item"
+                     data-dt-pagination-next-link-classes="page-link"
+                     data-dt-pagination-next-link-markup='<span aria-hidden="true">&raquo;</span>'
+
+                     data-dt-pagination-prev-classes="page-item"
+                     data-dt-pagination-prev-link-classes="page-link"
+                     data-dt-pagination-prev-link-markup='<span aria-hidden="true">&laquo;</span>'>
+                <thead>
+                  <tr class="text-uppercase font-size-14">
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Order
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Client
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Amount
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Date
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Status
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="font-size-14">
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR001</td>
+                    <td class="align-middle">Spotify</td>
+                    <td class="align-middle text-primary">$9.00</td>
+                    <td class="align-middle text-secondary">05 May</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR002</td>
+                    <td class="align-middle">Dropbox</td>
+                    <td class="align-middle text-primary">$257.93</td>
+                    <td class="align-middle text-secondary">12 May</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR003</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle text-primary">$441.99</td>
+                    <td class="align-middle text-secondary">15 May</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR004</td>
+                    <td class="align-middle">FrontApp</td>
+                    <td class="align-middle text-primary">$99.00</td>
+                    <td class="align-middle text-secondary">01 Jun</td>
+                    <td class="align-middle text-warning">Pending</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR005</td>
+                    <td class="align-middle">Slack</td>
+                    <td class="align-middle text-primary">$14.89</td>
+                    <td class="align-middle text-secondary">02 Jun</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR006</td>
+                    <td class="align-middle">Spotify</td>
+                    <td class="align-middle text-primary">$9.00</td>
+                    <td class="align-middle text-secondary">05 Jun</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR007</td>
+                    <td class="align-middle">Htmlstream</td>
+                    <td class="align-middle text-primary">$1,579.99</td>
+                    <td class="align-middle text-secondary">15 Jun</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR008</td>
+                    <td class="align-middle">GitHub</td>
+                    <td class="align-middle text-primary">$235.85</td>
+                    <td class="align-middle text-secondary">16 Apr</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR009</td>
+                    <td class="align-middle">Dropbox</td>
+                    <td class="align-middle text-primary">$12.31</td>
+                    <td class="align-middle text-secondary">12 Apr</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR0010</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle text-primary">$891.00</td>
+                    <td class="align-middle text-secondary">29 Apr</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End With Pagination Table -->
+
+            <!-- With Pagination Table -->
+            <div class="d-flex justify-content-between align-items-center">
+              <nav id="datatableWithPagination" aria-label="With pagination"></nav>
+
+              <small id="datatableWithPaginationInfo" class="text-secondary"></small>
+            </div>
+            <!-- End With Pagination Table -->
+          </div>
+
+          <div style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- With Pagination Table --&gt;
+                &lt;div class="table-responsive-md u-datatable"&gt;
+                  &lt;table class="js-datatable table"
+                         data-dt-info="#datatableWithPaginationInfo"
+                         data-dt-page-length="4"
+                         data-dt-is-show-paging="true"
+
+                         data-dt-pagination="datatableWithPagination"
+                         data-dt-pagination-classes="pagination mb-0"
+                         data-dt-pagination-items-classes="page-item"
+                         data-dt-pagination-links-classes="page-link"
+
+                         data-dt-pagination-next-classes="page-item"
+                         data-dt-pagination-next-link-classes="page-link"
+                         data-dt-pagination-next-link-markup='&lt;span aria-hidden="true"&gt;&raquo;&lt;/span&gt;'
+
+                         data-dt-pagination-prev-classes="page-item"
+                         data-dt-pagination-prev-link-classes="page-link"
+                         data-dt-pagination-prev-link-markup='&lt;span aria-hidden="true"&gt;&laquo;&lt;/span&gt;'&gt;
+                    &lt;thead&gt;
+                      &lt;tr class="text-uppercase font-size-14"&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Order
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Client
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Amount
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Date
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Status
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody class="font-size-14"&gt;
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR001&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Spotify&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$9.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;05 May&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR002&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Dropbox&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$257.93&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;12 May&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR003&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Google&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$441.99&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;15 May&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR004&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;FrontApp&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$99.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;01 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-warning"&gt;Pending&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR005&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Slack&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$14.89&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;02 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR006&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Spotify&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$9.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;05 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR007&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Htmlstream&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$1,579.99&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;15 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR008&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;GitHub&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$235.85&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;16 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR009&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Dropbox&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$12.31&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;12 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR0010&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Google&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$891.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;29 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;!-- End With Pagination Table --&gt;
+
+                &lt;!-- With Pagination Table --&gt;
+                &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                  &lt;nav id="datatableWithPagination" aria-label="With pagination"&gt;&lt;/nav&gt;
+
+                  &lt;small id="datatableWithPaginationInfo" class="text-secondary"&gt;&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;!-- End With Pagination Table --&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div id="with-search" class="mb-9">
+          <h2 class="h4">With search <a class="anchorjs-link" href="#with-search" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+          <div class="fd-example">
+            <!-- Search -->
+            <div class="js-focus-state input-group input-group-sm u-form u-form--sm mb-4">
+              <div class="input-group-prepend u-form__prepend">
+                <span class="input-group-text u-form__text">
+                  <span class="fa fa-search u-form__text-inner"></span>
+                </span>
+              </div>
+              <input id="datatableSearch" class="form-control u-form__input" type="email" placeholder="Search activities" aria-label="Search activities">
+            </div>
+            <!-- End Search -->
+
+            <!-- With Search Table -->
+            <div class="table-responsive-md u-datatable">
+              <table class="js-datatable table"
+                     data-dt-search="#datatableSearch">
+                <thead>
+                  <tr class="text-uppercase font-size-14">
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Order
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Client
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Amount
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Date
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="font-weight-medium">
+                      <div class="d-flex justify-content-between align-items-center">
+                        Status
+                        <div class="ml-2">
+                          <span class="fa fa-angle-up u-datatable__thead-icon"></span>
+                          <span class="fa fa-angle-down u-datatable__thead-icon"></span>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="font-size-14">
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR001</td>
+                    <td class="align-middle">Spotify</td>
+                    <td class="align-middle text-primary">$9.00</td>
+                    <td class="align-middle text-secondary">05 May</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR002</td>
+                    <td class="align-middle">Dropbox</td>
+                    <td class="align-middle text-primary">$257.93</td>
+                    <td class="align-middle text-secondary">12 May</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR003</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle text-primary">$441.99</td>
+                    <td class="align-middle text-secondary">15 May</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR004</td>
+                    <td class="align-middle">FrontApp</td>
+                    <td class="align-middle text-primary">$99.00</td>
+                    <td class="align-middle text-secondary">01 Jun</td>
+                    <td class="align-middle text-warning">Pending</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR005</td>
+                    <td class="align-middle">Slack</td>
+                    <td class="align-middle text-primary">$14.89</td>
+                    <td class="align-middle text-secondary">02 Jun</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR006</td>
+                    <td class="align-middle">Spotify</td>
+                    <td class="align-middle text-primary">$9.00</td>
+                    <td class="align-middle text-secondary">05 Jun</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR007</td>
+                    <td class="align-middle">Htmlstream</td>
+                    <td class="align-middle text-primary">$1,579.99</td>
+                    <td class="align-middle text-secondary">15 Jun</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR008</td>
+                    <td class="align-middle">GitHub</td>
+                    <td class="align-middle text-primary">$235.85</td>
+                    <td class="align-middle text-secondary">16 Apr</td>
+                    <td class="align-middle text-danger">Rejected</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR009</td>
+                    <td class="align-middle">Dropbox</td>
+                    <td class="align-middle text-primary">$12.31</td>
+                    <td class="align-middle text-secondary">12 Apr</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-middle text-secondary font-weight-normal">FR0010</td>
+                    <td class="align-middle">Google</td>
+                    <td class="align-middle text-primary">$891.00</td>
+                    <td class="align-middle text-secondary">29 Apr</td>
+                    <td class="align-middle text-success">Completed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End With Search Table -->
+          </div>
+
+          <div style="overflow: auto; height: 300px;">
+            <pre>
+              <code class="language-html" data-lang="html">
+                &lt;!-- Search --&gt;
+                &lt;div class="js-focus-state input-group input-group-sm u-form u-form--sm mb-4"&gt;
+                  &lt;div class="input-group-prepend u-form__prepend"&gt;
+                    &lt;span class="input-group-text u-form__text"&gt;
+                      &lt;span class="fa fa-search u-form__text-inner"&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;input id="datatableSearch" class="form-control u-form__input" type="email" placeholder="Search activities" aria-label="Search activities"&gt;
+                &lt;/div&gt;
+                &lt;!-- End Search --&gt;
+
+                &lt;!-- With Search Table --&gt;
+                &lt;div class="table-responsive-md u-datatable"&gt;
+                  &lt;table class="js-datatable table"
+                         data-dt-search="#datatableSearch"&gt;
+                    &lt;thead&gt;
+                      &lt;tr class="text-uppercase font-size-14"&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Order
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Client
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Amount
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Date
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th scope="col" class="font-weight-medium"&gt;
+                          &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                            Status
+                            &lt;div class="ml-2"&gt;
+                              &lt;span class="fa fa-angle-up u-datatable__thead-icon"&gt;&lt;/span&gt;
+                              &lt;span class="fa fa-angle-down u-datatable__thead-icon"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody class="font-size-14"&gt;
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR001&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Spotify&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$9.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;05 May&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR002&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Dropbox&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$257.93&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;12 May&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR003&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Google&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$441.99&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;15 May&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR004&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;FrontApp&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$99.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;01 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-warning"&gt;Pending&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR005&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Slack&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$14.89&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;02 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR006&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Spotify&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$9.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;05 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR007&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Htmlstream&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$1,579.99&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;15 Jun&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR008&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;GitHub&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$235.85&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;16 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-danger"&gt;Rejected&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR009&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Dropbox&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$12.31&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;12 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                        &lt;td class="align-middle text-secondary font-weight-normal"&gt;FR0010&lt;/td&gt;
+                        &lt;td class="align-middle"&gt;Google&lt;/td&gt;
+                        &lt;td class="align-middle text-primary"&gt;$891.00&lt;/td&gt;
+                        &lt;td class="align-middle text-secondary"&gt;29 Apr&lt;/td&gt;
+                        &lt;td class="align-middle text-success"&gt;Completed&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;!-- End With Search Table --&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <div id="js-behavior" class="mb-4">
+          <h2 class="h4">JavaScript behavior <a class="anchorjs-link" href="#js-behavior" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+        </div>
+
+        <div id="methods" class="mb-9">
+          <h2 class="h4">Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code class="highlighter-rouge">data-</code>, as in <code class="highlighter-rouge">data-dt-info=""</code>.</p>
+
+          <div class="fd-example">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Attribute</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-info</code></p>
+                  </td>
+                  <td>When this option is enabled, Datatables will show information about the table including information about filtered data if that action is being performed. This option allows that feature to be enabled or disabled.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-search</code></p>
+                  </td>
+                  <td>The <code class="highlighter-rouge">search option</code> allows the way DataTables performs filtering to be set during the initialisation, and to set an initial global filter.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-is-columns-search-thead-after</code></p>
+                  </td>
+                  <td>The <code class="highlighter-rouge">search option</code> allows the way DataTables performs filtering for <code class="highlighter-rouge">::after</code> pseudo within <code class="highlighter-rouge">thead</code> to be set during the initialisation, and to set an initial global filter.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-entries</code></p>
+                  </td>
+                  <td>Shows how many entries to show.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination</code></p>
+                  </td>
+                  <td>The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using <code class="highlighter-rouge">dom</code> and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-details-invoker</code></p>
+                  </td>
+                  <td>Column/selector for child row display control when using column details type. When the column type is selected for the <code class="highlighter-rouge">responsive.details.type option</code>, this option provides the ability to control what element in the table will activate the show / hide control in each row. This can be one of an column index, or a jQuery selector, as detailed below.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-page-length</code></p>
+                  </td>
+                  <td>Number of rows to display on a single page when using pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-is-responsive</code></p>
+                  </td>
+                  <td>This option provides the ability to enable and configure Responsive for DataTables.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-is-selectable</code></p>
+                  </td>
+                  <td>Set the element selector used for mouse event capture to select items.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-is-columns-search</code></p>
+                  </td>
+                  <td>Using this parameter, you can defined if DataTables should include this column in the filterable data in the table. You may want use this option to display filtering on generated columns such as 'Edit' and 'Delete' buttons for example.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-is-show-paging</code></p>
+                  </td>
+                  <td>DataTables can split the rows in tables into individual pages, which is an efficient method of showing a large number of records in a small space. The end user is provided with controls to request the display of different data as the navigate through the data. This feature is enabled by default, but if you wish to disable it, you may do so with this parameter.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-scroll-height</code></p>
+                  </td>
+                  <td>Set the row height, or how the row height is calculated. It is important for Scroller to know the height of the rows in the DataTable so it can perform its virtual display calculations. All rows must be of the same height, and Scroller will attempt to automatically calculate the height of rows itself.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the parent class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-items-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the item class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-links-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the link class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-next-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the next preview class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-next-link-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the next preview link class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-next-link-markup</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the next preview link markup for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-prev-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the previous preview class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-prev-link-classes</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the previous preview link class for pagination.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code class="highlighter-rouge">data-dt-pagination-prev-link-markup</code></p>
+                  </td>
+                  <td>A wrapping classes to identify the previous preview link markup for pagination.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="fd-callout fd-callout-warning">
+          <h3 id="official-documentation" class="h5">Official Documentation</h3>
+
+          <p>For more detailed information, see the official documentation: <a href="https://datatables.net/">Datatables</a>.</p>
+        </div>
+      </main>
+      <!-- ========== END MAIN ========== -->
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="javascript:;"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../../assets/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="../../assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Front -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.header.js"></script>
+  <script src="../../assets/js/components/hs.unfold.js"></script>
+  <script src="../../assets/js/components/hs.go-to.js"></script>
+  <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../../assets/js/components/hs.datatables.js"></script>
+  <script src="../assets/js/components/hs.autocomplete-local-search.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of datatables
+      $.HSCore.components.HSDatatables.init('.js-datatable');
+
+      // initialization of custom select
+      $('.js-select').selectpicker();
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 767,
+        hideTimeOut: 0
+      });
+
+      // initialization of autocomplet
+      $.HSCore.components.HSLocalSearchAutocomplete.init('#fd-sidebar-navigation__search-autocomplete');
+
+      // initialization of HSScrollNav component
+      $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+        duration: 700
+      });
+    });
+  </script>
+</body>
+</html>

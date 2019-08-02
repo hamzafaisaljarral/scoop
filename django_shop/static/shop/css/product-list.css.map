@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/product-list.css",
+	"sources": [
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/product-list.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/_product-figure.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/_variables.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/example/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,eAAe,CAAC;EACf,YAAY,EAAE,GAAG;EACjB,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,KAAK,GAEb;EALD,ACEA,eDFe,CCEf,MAAM,CAAC;IACN,MAAM,EAAE,GAAG,CAAC,KAAK,CEmqBc,IAAI;IFlqBnC,aAAa,EEyGc,GAAG;IFxG9B,OAAO,EAAE,IAAI;IAWb,UAAU,EAAE,KAAK,GACjB;IDjBD,ACMC,eDNc,CCEf,MAAM,CAIL,CAAC,AAAA,MAAM,EDNR,ACMU,eDNK,CCEf,MAAM,CAII,CAAC,AAAA,OAAO,CAAC;MACjB,eAAe,EAAE,IAAI,GACrB;IDRF,ACSC,eDTc,CCEf,MAAM,CAOL,EAAE,CAAC;MACF,UAAU,EAAE,IAAI,GAChB;IDXF,ACYC,eDZc,CCEf,MAAM,CAUL,UAAU,CAAC;MACV,UAAU,EAAE,GAAG;MACf,UAAU,EAAE,IAAI,GAChB;;ADRF,AAAA,WAAW,CAAC;EACX,UAAU,EAAE,eAAe,GAC3B"
+}

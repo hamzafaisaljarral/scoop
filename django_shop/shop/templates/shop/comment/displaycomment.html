@@ -1,0 +1,139 @@
+
+{% load static i18n cms_tags sekizai_tags %}
+
+{% addtoblock "js" %}<script src="{% static 'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>{% endaddtoblock %}
+{% add_data "ng-requires" "ui.bootstrap" %}
+
+{% addtoblock "js" %}<script src="{% static 'shop/js/utils.js' %}" type="text/javascript"></script>{% endaddtoblock %}
+{% addtoblock "js" %}<script src="{% static 'shop/js/catalog.js' %}" type="text/javascript"></script>{% endaddtoblock %}
+{% add_data "ng-requires" "django.shop.catalog" %}
+
+{% block head %}
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+{% addtoblock "css" %} <link href = "{% static 'css/bootstrap.css' %}" rel = "stylesheet" type = "text/css"/>{% endaddtoblock %}
+
+{% addtoblock "css" %} <link rel = "stylesheet" href = "{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %}">{% endaddtoblock %}
+{% block style %}
+<style>
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+.detailBox {
+    width:320px;
+    border:1px solid #bbb;
+    margin:50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
+
+
+
+</style>
+{% endblock %}
+{% endblock head %}
+
+{% block main-content %}
+
+<body>
+<!------------container------->
+<div class="detailBox">
+    <div class="titleBox">
+      <label>Comment Box</label>
+        <button type="button" class="close" aria-hidden="true">&times;</button>
+    </div>
+    <div class="commentBox">
+
+        <p class="taskDescription"> comments.</p>
+    </div>
+	{% for contact in contacts %}
+    <div class="actionBox">
+        <ul class="commentList">
+            <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/50/50" />
+                </div>
+                <div class="commentText">
+                    <p class="">{{ contact.comments }}.</p> <span class="date sub-text">{{ contact.name }}</span>
+
+                </div>
+            </li>
+		</ul>
+		{% endfor %}
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Your comments" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+{% block paginator %}
+	{% include "shop/catalog/paginator.html" %}
+{% endblock %}
+{% endblock main-content %}
+
+
+

@@ -1,0 +1,2191 @@
+{% load static cms_tags i18n sekizai_tags sass_tags aldryn_forms_tags %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" ng-app="myShop">
+<head>
+  <!-- Title -->
+  <title>{% block title %}Scoop Inside{% endblock %}</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+		{% block css %}
+	<style>
+
+
+
+
+  .suggestion-name {
+    margin-left: 4px;
+    margin-right: 4px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .suggestion-address {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 8px;
+    font-size: 0.8em;
+    color: rgba(74, 74, 76, 0.5);
+  }
+
+  .suggestion-precision {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    animation: none;
+  }
+</style>
+	{% endblock css %}
+
+ {% render_block "css"  %}
+  <!-- CSS Global Compulsory -->
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.css' %}">{% endaddtoblock %}
+
+  <!-- CSS Implementing Plugins -->
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/fontawesome-all.min.css' %}">{% endaddtoblock %}
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/animate.css/animate.min.css' %}">{% endaddtoblock %}
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/hs-megamenu/src/hs.megamenu.css' %}">{% endaddtoblock %}
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css' %}">{% endaddtoblock %}
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/summernote/dist/summernote-lite.css' %}">{% endaddtoblock %}
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap-tagsinput/css/bootstrap-tagsinput.css' %}">{% endaddtoblock %}
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/vendor/flatpickr/dist/flatpickr.min.css' %}">{% endaddtoblock %}
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- CSS Front Template -->
+  {% addtoblock "css" %}<link rel="stylesheet" href="{% static 'assets/css/front.css' %}">{% endaddtoblock %}
+</head>
+
+</head>
+
+<body>
+{% cms_toolbar %}
+  <!-- Skippy -->
+  <a id="skippy" class="sr-only sr-only-focusable u-skippy" href="#content">
+    <div class="container">
+      <span class="u-skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <!-- End Skippy -->
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="u-header">
+    <!-- Search -->
+    <div id="searchPushTop" class="u-search-push-top">
+      <div class="container position-relative">
+        <div class="u-search-push-top__content mx-auto">
+          <!-- Close Button -->
+          <button type="button" class="close u-search-push-top__close-btn"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="searchPushTop"
+                  data-unfold-type="jquery-slide"
+                  data-unfold-target="#searchPushTop">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <!-- End Close Button -->
+
+          <!-- Input -->
+          <form class="js-focus-state input-group input-group-lg u-form u-form--lg u-form--no-brd">
+            <input type="search" class="form-control u-form__input" placeholder="Search Front" aria-label="Search Front">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary u-btn-primary">Search</button>
+            </div>
+          </form>
+          <!-- End Input -->
+
+          <!-- Link Lists -->
+          <div class="row d-none d-md-flex mt-7">
+            <div class="col-sm-6">
+              <strong class="d-block mb-2">Quick Links</strong>
+
+              <div class="row">
+                <!-- List -->
+                <ul class="col-sm-6 list-unstyled u-list">
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Search Results List
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Search Results Grid
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="../pages/about-agency.html">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="../pages/services-agency.html">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Invoice
+                    </a>
+                  </li>
+                </ul>
+                <!-- End List -->
+
+                <!-- List -->
+                <ul class="col-sm-6 list-unstyled u-list">
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      User Contacts
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Reviews
+                    </a>
+                  </li>
+                  <li>
+                    <a class="u-list__link" href="#">
+                      <span class="fa fa-angle-right u-list__link-icon mr-1"></span>
+                      Settings
+                    </a>
+                  </li>
+                </ul>
+                <!-- End List -->
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <!-- Banner -->
+              <div class="rounded u-search-push-top__banner">
+                <div class="d-flex align-items-center">
+                  <div class="u-search-push-top__banner-container">
+                    <img class="img-fluid u-search-push-top__banner-img" src="{% static 'assets/img/mockups/img3.png' %}" alt="Image Description">
+                    <img class="img-fluid u-search-push-top__banner-img" src="{% static 'assets/img/mockups/img2.png' %}" alt="Image Description">
+                  </div>
+
+                  <div>
+                    <div class="mb-4">
+                      <strong class="d-block mb-2">Featured Item</strong>
+                      <p>Create astonishing web sites and pages.</p>
+                    </div>
+                    <a class="btn btn-xs u-btn-success--air transition-3d-hover" href="index.html">Apply Now <span class="fa fa-angle-right ml-2"></span></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Banner -->
+            </div>
+          </div>
+          <!-- End Link Lists -->
+        </div>
+      </div>
+    </div>
+    <!-- End Search -->
+
+    <div class="u-header__section">
+      <!-- Topbar -->
+      <div class="container u-header__hide-content pt-2">
+        <div class="d-flex align-items-center mb-0">
+          <!-- Language -->
+          <div class="position-relative">
+            <a id="languageDropdownInvoker" class="d-flex align-items-center u-unfold-wrapper" href="javascript:;" role="button"
+               aria-controls="languageDropdown"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-unfold-event="hover"
+               data-unfold-target="#languageDropdown"
+               data-unfold-type="css-animation"
+               data-unfold-duration="300"
+               data-unfold-delay="300"
+               data-unfold-hide-on-scroll="true"
+               data-unfold-animation-in="slideInUp"
+               data-unfold-animation-out="fadeOut">
+               <img class="u-unfold__icon" src="{% static 'assets/vendor/flag-icon-css/flags/4x3/us.svg' %}" alt="SVG">
+              <span class="d-inline-block d-sm-none">US</span>
+              <span class="d-none d-sm-inline-block">United States</span>
+              <span class="fa fa-angle-down u-unfold__icon-pointer"></span>
+            </a>
+
+            <div id="languageDropdown" class="u-unfold mt-2" aria-labelledby="languageDropdownInvoker">
+              <a class="active u-list__link" href="#">English</a>
+              <a class="u-list__link" href="#">Deutsch</a>
+              <a class="u-list__link" href="#">Español‎</a>
+            </div>
+          </div>
+          <!-- End Language -->
+
+          <div class="ml-auto">
+            <!-- Jump To -->
+            <div class="d-inline-block d-sm-none position-relative mr-2">
+              <a id="jumpToDropdownInvoker" class="d-flex align-items-center u-unfold-wrapper" href="javascript:;" role="button"
+                 aria-controls="jumpToDropdown"
+                 aria-haspopup="true"
+                 aria-expanded="false"
+                 data-unfold-event="hover"
+                 data-unfold-target="#jumpToDropdown"
+                 data-unfold-type="css-animation"
+                 data-unfold-duration="300"
+                 data-unfold-delay="300"
+                 data-unfold-hide-on-scroll="true"
+                 data-unfold-animation-in="slideInUp"
+                 data-unfold-animation-out="fadeOut">
+                Jump to
+                <span class="fa fa-angle-down u-unfold__icon-pointer"></span>
+              </a>
+
+              <div id="jumpToDropdown" class="u-unfold mt-2" aria-labelledby="jumpToDropdownInvoker">
+                <a class="u-list__link" href="../pages/help.html">Help</a>
+                <a class="u-list__link" href="../pages/contacts-agency.html">Contacts</a>
+              </div>
+            </div>
+            <!-- End Jump To -->
+
+            <!-- Links -->
+            <div class="d-none d-sm-inline-block ml-sm-auto">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mr-0">
+                  <a class="u-header__topbar-nav-link" href="../pages/help.html">Help</a>
+                </li>
+                <li class="list-inline-item mr-0">
+                  <a class="u-header__topbar-nav-link" href="../pages/contacts-agency.html">Contacts</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Links -->
+          </div>
+
+          <ul class="list-inline ml-2 mb-0">
+            <!-- Search -->
+            <li class="list-inline-item">
+              <a class="btn btn-xs u-btn--icon u-btn-text-secondary" href="javascript:;" role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      aria-controls="searchPushTop"
+                      data-unfold-type="jquery-slide"
+                      data-unfold-target="#searchPushTop">
+                <span class="fa fa-search u-btn--icon__inner"></span>
+              </a>
+            </li>
+            <!-- End Search -->
+
+            <!-- Account Login -->
+            <li class="list-inline-item">
+              <!-- Account Sidebar Toggle Button -->
+              <a id="sidebarNavToggler" class="btn btn-xs u-btn--icon u-btn-text-secondary u-sidebar__toggler" href="javascript:;" role="button"
+                 aria-controls="sidebarContent"
+                 aria-haspopup="true"
+                 aria-expanded="false"
+                 data-unfold-event="click"
+                 data-unfold-hide-on-scroll="false"
+                 data-unfold-target="#sidebarContent"
+                 data-unfold-type="css-animation"
+                 data-unfold-animation-in="fadeInRight"
+                 data-unfold-animation-out="fadeOutRight"
+                 data-unfold-duration="500">
+                <span class="fa fa-user-circle u-btn--icon__inner font-size-14"></span>
+              </a>
+              <!-- End Account Sidebar Toggle Button -->
+            </li>
+            <!-- End Account Login -->
+          </ul>
+        </div>
+      </div>
+      <!-- End Topbar -->
+
+      <div id="logoAndNav" class="container">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar">
+          <!-- Logo -->
+          <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-top-space" href="index.html" aria-label="Front">
+            <img src="{% static 'assets/svg/logos/logo.svg' %}" alt="Logo">
+          </a>
+          <!-- End Logo -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn u-hamburger"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <span id="hamburgerTrigger" class="u-hamburger__box">
+              <span class="u-hamburger__inner"></span>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+
+          <!-- Navigation -->
+          <div id="navBar" class="collapse navbar-collapse py-0">
+            <ul class="navbar-nav u-header__navbar-nav ml-lg-auto">
+              <!-- Home -->
+              <!--<li class="nav-item hs-has-mega-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="left">-->
+                <a id="homeMegaMenu" class="nav-link u-header__nav-link pl-0" href="../home/"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  Home
+                 <!-- <span class="fa fa-angle-down u-header__nav-link-icon"></span>-->
+                </a>
+
+                <!-- Home - Mega Menu -->
+                <div class="hs-mega-menu u-header__sub-menu w-100 u-header__mega-menu-wrapper-v2" aria-labelledby="homeMegaMenu">
+                  <div class="row p-0 mr-0">
+                    <div class="col-lg-6 pr-0">
+                      <!-- Banner Image -->
+                      <div class="d-none d-lg-block u-header__banner-v1" data-bg-img-src="{% static 'assets/img/750x750/img1.jpg' %}">
+                        <div class="w-100 text-center u-header__banner-v1-content u-content-centered-y p-4">
+                          <div class="mb-4">
+                            <strong class="d-block u-header__banner-v1-title mb-2">Branding Works</strong>
+                            <span class="u-header__banner-v1-text">Experience a level of our quality in both design &amp; customization works.</span>
+                          </div>
+                          <a class="btn btn-primary u-btn-primary btn-sm transition-3d-hover" href="#">Learn More <span class="fa fa-angle-right ml-2"></span></a>
+                        </div>
+                      </div>
+                      <!-- End Banner Image -->
+                    </div>
+
+                    <div class="col-lg-6 u-header__mega-menu-wrapper-v3">
+                      <div class="row u-header__mega-menu-wrapper-v1">
+                        <div class="col-sm-6">
+                          <strong class="d-block mb-2">Classic</strong>
+
+                          <!-- Links -->
+                          <ul class="list-unstyled mb-4">
+                           <!-- <li><a class="nav-link u-list__link py-2 px-0" href="index.html">Classic Agency</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="classic-crypto.html">Classic Crypto</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="classic-business.html">Classic Business</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="classic-marketing.html">Classic Marketing</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="classic-consulting.html">Classic Consulting</a></li>-->
+                          </ul>
+                          <!-- End Links -->
+
+                          <strong class="d-block mb-2">Corporate</strong>
+
+                          <!-- Links -->
+                          <ul class="list-unstyled mb-4">
+                         <!--   <li><a class="nav-link u-list__link py-2 px-0" href="corporate-agency.html">Corporate Agency</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="corporate-start-up.html">Corporate Start-Up</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="corporate-business.html">Corporate Business <span class="badge badge-success ml-1">New</span></a></li>-->
+                          </ul>
+                          <!-- End Links -->
+                        </div>
+
+                        <div class="col-sm-6">
+                          <strong class="d-block mb-2">Landing</strong>
+
+                          <!-- Links -->
+                          <ul class="list-unstyled mb-4">
+                          <!--  <li><a class="nav-link u-list__link py-2 px-0" href="landing-house.html">Landing House <span class="badge badge-success ml-1">New</span></a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="landing-job.html">Landing Job <span class="badge badge-success ml-1">New</span></a></li>-->
+                          </ul>
+                          <!-- End Links -->
+
+                          <strong class="d-block mb-2">Blog</strong>
+
+                          <!-- Links -->
+                          <ul class="list-unstyled mb-4">
+                          <!--  <li><a class="nav-link u-list__link py-2 px-0" href="blog-agency.html">Blog Agency</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="blog-start-up.html">Blog Start-Up</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="blog-business.html">Blog Business</a></li>-->
+                          </ul>
+                          <!-- End Links -->
+
+                          <strong class="d-block mb-2">Portfolio</strong>
+
+                          <!-- Links -->
+
+                          <ul class="list-unstyled u-list">
+                            <li><a class="nav-link u-list__link py-2 px-0" href="portfolio-agency.html">Portfolio Agency</a></li>
+                            <li><a class="nav-link u-list__link py-2 px-0" href="portfolio-profile.html">Portfolio Profile</a></li>
+                          </ul>
+                          <!-- End Links -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Home - Mega Menu -->
+              </li>
+              <!-- End Home -->
+
+              <!-- Pages -->
+              <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut">
+                <a id="pagesMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false"
+                   aria-labelledby="pagesSubMenu">
+                  Account
+                  <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                </a>
+
+                <!-- Pages - Submenu -->
+                {% if user.is_authenticated %}
+						    {% if user.freelancer == True %}
+                <ul id="pagesSubMenu" class="list-inline hs-sub-menu u-header__sub-menu py-3 mb-0" style="min-width: 220px;"
+                    aria-labelledby="pagesMegaMenu">
+                  <!-- Account -->
+                  <li class="dropdown-item px-0">
+                    <a id="navLinkPagesAccount" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="{% url 'profile_with_pk' pk=user.pk  %}"
+                       >
+                      Profile
+                    </a>
+				  </li>
+				</ul>
+
+					  {% endif %}
+					  {% endif %}
+
+					  {% if user.is_authenticated %}
+						    {% if user.Jopublisher == True %}
+				<ul id="pagesSubMenu" class="list-inline hs-sub-menu u-header__sub-menu py-3 mb-0" style="min-width: 220px;"
+                    aria-labelledby="pagesMegaMenu">
+                  <li class="dropdown-item px-0">
+                    <a id="navLinkPagesAccount" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="../userjoblist/"
+                       >
+                      Profile
+                    </a>
+				</li>
+				</ul>
+					  {% endif %}
+					  {% endif %}
+					{% if user.is_authenticated == False %}
+				<ul id="pagesSubMenu" class="list-inline hs-sub-menu u-header__sub-menu py-3 mb-0" style="min-width: 220px;"
+                    aria-labelledby="pagesMegaMenu">
+
+                  <li class="dropdown-item px-0">
+                    <a id="navLinkPagesAccount" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="/login/"
+                       >
+                      Login First
+                    </a>
+				</li>
+				</ul>
+					  {% endif %}
+
+
+                    <!-- Submenu (level 2) -->
+
+                    <ul id="navSubmenuPagesAccount" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesAccount">
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Dashboard</a>
+                      </li>-->
+                      <li class="dropdown-item px-0">
+
+
+						  {% if user.is_authenticated %}
+						   {% if user.jopublisher == True %}
+						  <a class="nav-link u-list__link px-4" href="../userjoblist/">Profile</a>
+						   {% endif %}
+						  {% endif %}
+
+                      </li>
+                      <!--<li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">My tasks</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Projects</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Members</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Edit profile</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Change password</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Notifications</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Activity</a>
+                      </li>-->
+                      <!--<li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Payment methods</a>
+                      </li>-->
+                      <!--<li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Invite friends</a>
+                      </li>-->
+                      <!--<li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Plans</a>
+                      </li>-->
+                     <!-- <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">API Token</a>
+                      </li>-->
+
+                    <!-- End Submenu (level 2) -->
+
+                  <!-- End Account -->
+
+
+                  <!-- About -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkPagesAbout" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuPagesAbout">
+                      About
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuPagesAbout" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesAbout">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">About Agency</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">About Start-Up</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                 <!-- </li>
+                  <!-- About -->
+
+                  <!-- Services -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkPagesServices" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuPagesServices">
+                      Services
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                    <!--<ul id="navSubmenuPagesServices" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesServices">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Services Agency</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Services Start-Up</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                 <!-- </li>
+                  <!-- Services -->
+
+                  <!-- Careers -->
+                 <!-- <li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkPagesCareers" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuPagesCareers">
+                      Careers
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuPagesCareers" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesCareers">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Careers</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Careers Single</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Hire Us</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                 <!-- </li>
+                  <!-- Careers -->
+
+                  <!-- Login -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkPagesLogin" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuPagesLogin">
+                      Login &amp; Signup
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                  <!--  <ul id="navSubmenuPagesLogin" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesLogin">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Login Simple</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Signup Simple</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Recover Account</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                 <!-- </li>
+                  <!-- Signup -->
+
+                  <!-- Contacts -->
+                 <!-- <li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkContactsServices" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuContactsServices">
+                      Contacts
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                    <!--<ul id="navSubmenuContactsServices" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkContactsServices">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Contacts Agency</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Contacts Start-Up</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                  <!--</li>
+                  <!-- Contacts -->
+
+                  <!-- Utilities -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkPagesUtilities" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuPagesUtilities">
+                      Utilities
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuPagesUtilities" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesUtilities">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Help</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Pricing</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Terms &amp; Conditions</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Privacy &amp; Policy</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                  <!--</li>
+                  <!-- Utilities -->
+
+                  <!-- Specialty -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkPagesSpecialty" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuPagesSpecialty">
+                      Specialty
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                    <ul id="navSubmenuPagesSpecialty" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkPagesSpecialty">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Cover Page</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Coming Soon</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Maintenance Mode</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="#">Error 404</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                  </li>
+                  <!-- Specialty -->
+                </ul>
+                <!-- End Pages - Submenu -->
+              </li>
+              <!-- End Pages -->
+
+              <!-- Works -->
+              <li class="nav-item hs-has-mega-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="right">
+                <a id="worksMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  Pages
+                  <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                </a>
+
+                <!-- Works - Mega Menu -->
+                <div class="hs-mega-menu w-100 u-header__sub-menu u-header__mega-menu-wrapper-v1" aria-labelledby="worksMegaMenu">
+                  <div class="row">
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                      <strong class="d-block mb-2">Jobs for you</strong>
+
+
+                      <!-- Links -->
+                      <ul class="list-unstyled u-list">
+						  {% if user.is_authenticated %}
+						    {% if user.freelancer == True %}
+						  <li><a class="nav-link u-list__link py-2 px-0" href="../joblist/">Jobs available</a></li>
+						   {% endif %}
+						  {% endif %}
+						  {% if user.is_authenticated %}
+						   {% if user.jopublisher == True %}
+						  <li><a class="nav-link u-list__link py-2 px-0" href="../userjoblist/">Job posted</a></li>
+						   {% endif %}
+						  {% endif %}
+						  {% if user.is_authenticated == False %}
+						   <a class="nav-link u-list__link px-4" href="../login/">Login</a>
+						  or
+						  <a class="nav-link u-list__link px-4" href="../register/signup/">signup</a>
+                          {% endif %}
+                        <!--<li><a class="nav-link u-list__link py-2 px-0" href="../arts-crafts/">Art and Design</a></li>
+                      <!--  <li><a class="nav-link u-list__link py-2 px-0" href="#">Career & jobs</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="#">Food & Drinks</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="#">Events & lifestyle</a></li>
+
+                      </ul>
+                      <!-- End Links -->
+                    </div>
+<!--
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                      <strong class="d-block mb-2">Full Width Layouts</strong>
+
+                      <!-- Links -->
+					  <!--
+                      <ul class="list-unstyled u-list">
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/fullwidth-classic.html">Portfolio Classic</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/fullwidth-grid.html">Portfolio Grid</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/fullwidth-masonry.html">Portfolio Masonry</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/fullwidth-modern.html">Portfolio Modern</a></li>
+                      </ul>
+                      <!-- End Links -->
+                  <!--  </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-sm-0">
+                      <strong class="d-block mb-2">Single Pages</strong>
+
+                      <!-- Links -->
+                     <!-- <ul class="list-unstyled u-list">
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/single-page-simple.html">Single Page Simple</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/single-page-grid.html">Single Page Grid</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/single-page-masonry.html">Single Page Masonry</a></li>
+                      </ul>
+                      <!-- End Links -->
+                   <!-- </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                      <strong class="d-block mb-2">Case Studies</strong>
+
+                      <!-- Links -->
+                     <!-- <ul class="list-unstyled u-list">
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/case-studies-simple.html">Case Studies Simple</a></li>
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../portfolio/case-studies-modern.html">Case Studies Modern</a></li>
+                      </ul>
+                      <!-- End Links -->
+                    <!--</div>-->
+                  </div>
+                </div>
+                <!-- End Works - Mega Menu -->
+              </li>
+              <!-- End Works -->
+
+              <!-- Blog -->
+				<li class="nav-item hs-has-mega-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-position="right">
+                <a id="worksMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  Blog
+                  <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                </a>
+
+                <!-- Works - Mega Menu -->
+                <div class="hs-mega-menu w-100 u-header__sub-menu u-header__mega-menu-wrapper-v1" aria-labelledby="worksMegaMenu">
+                  <div class="row">
+                    <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                      <!--<strong class="d-block mb-2">Boxed Layouts</strong>
+
+
+                      <!-- Links -->
+                      <ul class="list-unstyled u-list">
+                        <li><a class="nav-link u-list__link py-2 px-0" href="../blogging/">Blogs List </a></li>
+
+                      </ul>
+                      <!-- End Links -->
+                    </div>
+              <!--<li class="nav-item hs-has-sub-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut">
+                <a id="blogMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false"
+                   aria-labelledby="blogSubMenu">
+                  Blog
+                  <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                </a>
+
+                <!-- Blog - Submenu -->
+               <!-- <ul id="blogSubMenu" class="list-inline hs-sub-menu u-header__sub-menu py-3 mb-0" style="min-width: 220px;"
+                    aria-labelledby="blogMegaMenu">
+                  <!-- Classic -->
+                 <!-- <li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkBlogClassic" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuBlogClassic">
+                      Classic
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuBlogClassic" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkBlogClassic">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/classic-left-sidebar.html">Left Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/classic-right-sidebar.html">Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/classic-full-width.html">Full Width</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                  <!--</li>
+                  <!-- Classic -->
+
+                  <!-- Grid -->
+                 <!-- <li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkBlogGrid" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuBlogGrid">
+                      Grid
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuBlogGrid" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkBlogGrid">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/grid-left-sidebar.html">Left Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/grid-right-sidebar.html">Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/grid-full-width.html">Full Width</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                  <!--</li>
+                  <!-- Grid -->
+
+                  <!-- List -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkBlogList" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuBlogList">
+                      List
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                  <!--  <ul id="navSubmenuBlogList" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkBlogList">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/list-left-sidebar.html">Left Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/list-right-sidebar.html">Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/list-full-width.html">Full Width</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                  <!--</li>
+                  <!-- List -->
+
+                  <!-- Modern -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkBlogCard" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuBlogCard">
+                      Modern
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                  <!--  <ul id="navSubmenuBlogCard" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkBlogCard">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/modern-left-sidebar.html">Left Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/modern-right-sidebar.html">Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/modern-full-width.html">Full Width</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                 <!-- </li>
+                  <!-- Grid Modern -->
+
+                  <!-- Masonry -->
+                 <!-- <li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkBlogGridMinimal" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuBlogGridMinimal">
+                      Masonry
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuBlogGridMinimal" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkBlogGridMinimal">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/masonry-left-sidebar.html">Left Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/masonry-right-sidebar.html">Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/masonry-full-width.html">Full Width</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                <!--  </li>
+                  <!-- Masonry -->
+
+                  <!-- Single Article -->
+                  <!--<li class="dropdown-item hs-has-sub-menu">
+                    <a id="navLinkBlogGridMasonry" class="nav-link u-header__sub-menu-nav-link u-list__link py-2" href="javascript:;"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       aria-controls="navSubmenuBlogGridMasonry">
+                      Single Article
+                      <span class="fa fa-angle-right u-header__sub-menu-nav-link-icon"></span>
+                    </a>
+
+                    <!-- Submenu (level 2) -->
+                   <!-- <ul id="navSubmenuBlogGridMasonry" class="hs-sub-menu list-unstyled u-header__sub-menu u-header__sub-menu-menu-gutter--y u-header__sub-menu-offset" style="min-width: 220px;"
+                        aria-labelledby="navLinkBlogGridMasonry">
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/single-article-classic.html">Classic</a>
+                      </li>
+                      <li class="dropdown-item px-0">
+                        <a class="nav-link u-list__link px-4" href="../blog/single-article-simple.html">Simple</a>
+                      </li>
+                    </ul>
+                    <!-- End Submenu (level 2) -->
+                 <!-- </li>
+                  <!-- Single Article -->
+               <!-- </ul>
+                <!-- End Submenu -->
+              <!--</li>
+              <!-- End Blog -->
+
+              <!-- Shop -->
+             <!-- <li class="nav-item hs-has-mega-menu u-header__nav-item"
+                  data-event="hover"
+                  data-animation-in="slideInUp"
+                  data-animation-out="fadeOut"
+                  data-max-width="440px"
+                  data-position="right">
+                <a id="shopMegaMenu" class="nav-link u-header__nav-link" href="javascript:;"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                  Shop
+                  <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                </a>
+
+                <!-- Shop - Mega Menu -->
+                <div class="hs-mega-menu u-header__sub-menu" aria-labelledby="shopMegaMenu">
+                  <div class="u-header__mega-menu-wrapper-v1">
+                    <strong class="d-block mb-2">Shop Elements</strong>
+
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <!-- Links -->
+                        <ul class="list-unstyled u-list">
+                          <li><a class="nav-link u-list__link py-2 px-0" href="../shop/classic.html">Classic</a></li>
+                          <li><a class="nav-link u-list__link py-2 px-0" href="../shop/masonry.html">Masonry</a></li>
+                          <li><a class="nav-link u-list__link py-2 px-0" href="../shop/single-product.html">Single Product</a></li>
+                        </ul>
+                        <!-- End Links -->
+                      </div>
+
+                      <div class="col-sm-6">
+                        <!-- Links -->
+                        <ul class="list-unstyled u-list">
+                          <li><a class="nav-link u-list__link py-2 px-0" href="../shop/cart.html">Cart</a></li>
+                          <li><a class="nav-link u-list__link py-2 px-0" href="../shop/checkout.html">Checkout</a></li>
+                        </ul>
+                        <!-- End Links -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mega Menu Banner -->
+                  <div class="d-none d-md-block u-header__banner-v2 pr-4">
+                    <div class="d-flex align-items-end">
+                      <img class="img-fluid mr-4" src="{% static 'assets/img/mockups/img4.png' %}" alt="Image Description" style="width: 200px;">
+                      <div class="py-4">
+                        <div class="mb-4">
+                          <strong class="d-block u-header__banner-v2-title mb-2">Win T-shirt</strong>
+                          <span class="d-block u-header__banner-v2-text">Win one of our Front brand T-shirts.</span>
+                        </div>
+                        <a class="btn btn-sm u-btn-primary--air transition-3d-hover" href="../shop/classic.html">Learn More <span class="fa fa-angle-right ml-2"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Mega Menu Banner -->
+                </div>
+                <!-- End Shop - Mega Menu -->
+              </li>
+              <!-- End Shop -->
+
+              <!-- Starter - Link -->
+             <!-- <li class="nav-item">
+                <a class="nav-link u-header__nav-link" href="../../starter/index.html">
+                  Starter
+                </a>
+              </li>
+              <!-- End Starter - Link -->
+
+              <!-- Button -->
+              <li class="nav-item d-none d-md-inline-block pl-3 pr-0">
+                {% if user.is_authenticated %}
+				    {% if user.jopublisher == True %}
+                <a class="btn btn-sm btn-primary u-btn-primary transition-3d-hover" href="../ad-jobs/" target="_blank">
+
+                </a>
+
+				   {% endif %}
+				  {% endif %}
+				  {% if user.is_authenticated %}
+				    {% if user.freelancer == True %}
+                <a class="btn btn-sm btn-primary u-btn-primary transition-3d-hover" href="../joblist/" target="_blank">
+                  Apply for job
+                </a>
+
+				   {% endif %}
+				  {% endif %}
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+          <!-- End Navigation -->
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main">
+    <!-- Breadcrumb Section -->
+    <!--<div class="bg-primary">
+      <div class="container u-space-1-top pb-3">
+        <div class="row">
+          <div class="col-lg-5 order-lg-2 text-lg-right mb-4 mb-lg-0">
+            <div class="d-flex d-lg-inline-block justify-content-between justify-content-lg-end align-items-center align-items-lg-start">
+              <!-- Breadcrumb -->
+             <!-- <ol class="breadcrumb breadcrumb-white breadcrumb-no-gutter mb-0">
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="../home/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="dashboard.html">Account</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Edit profile</li>
+              </ol>
+              <!-- End Breadcrumb -->
+
+              <!-- Breadcrumb Nav Toggle Button -->
+             <!-- <div class="d-lg-none">
+                <button type="button" class="navbar-toggler btn u-hamburger u-hamburger--white"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false"
+                        aria-controls="breadcrumbNavBar"
+                        data-toggle="collapse"
+                        data-target="#breadcrumbNavBar">
+                  <span id="breadcrumbHamburgerTrigger" class="u-hamburger__box">
+                    <span class="u-hamburger__inner"></span>
+                  </span>
+                </button>
+              </div>
+              <!-- End Breadcrumb Nav Toggle Button -->
+           <!-- </div>
+          </div>
+
+          <div class="col-lg-7 order-lg-1">
+            <!-- User Info -->
+           <!-- <div class="media d-block d-sm-flex align-items-sm-center">
+              <div class="u-lg-avatar position-relative mb-3 mb-sm-0 mr-3">
+                <img class="u-lg-avatar rounded-circle" src="../../assets/img/160x160/img2.jpg" alt="Image Description">
+                <span class="u-badge u-badge-border-success u-badge--md u-badge-pos--bottom-right-0 rounded-circle">
+                  <span class="fa fa-check"></span>
+                </span>
+              </div>
+              <div class="media-body">
+                <h1 class="h3 text-white font-weight-medium mb-1">Howdy, Natalie!</h1>
+                <span class="d-block text-white">natalie.curtis@gmail.com</span>
+              </div>
+            </div>
+            <!-- End User Info -->
+         <!-- </div>
+        </div>
+      </div>
+
+      <div class="container u-space-1-bottom u-space-bottom-0--lg">
+        <div class="d-lg-flex justify-content-lg-between align-items-lg-center">
+          <!-- Navbar -->
+          <!--<div class="u-header u-header--bg-transparent-lg z-index-4">
+            <div class="u-header__section bg-transparent u-header--white-nav-links">
+              <nav class="js-breadcrumb-menu navbar navbar-expand-lg u-header__navbar">
+                <div id="breadcrumbNavBar" class="collapse navbar-collapse py-0">
+                  <ul class="navbar-nav w-100 u-header__navbar-nav">
+                    <!-- General -->
+                  <!--  <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                        data-event="hover"
+                        data-animation-in="slideInUp"
+                        data-animation-out="fadeOut">
+                      <a id="generalDropdown" class="nav-link u-header__nav-link pl-0" href="javascript:;"
+                         aria-haspopup="true"
+                         aria-expanded="false"
+                         aria-labelledby="generalDropdown">
+                        General
+                        <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                      </a>
+
+                      <!-- Submenu -->
+                     <!-- <ul id="generalDropdown" class="list-inline hs-sub-menu u-header__sub-menu py-lg-3 mb-0" style="min-width: 220px;"
+                          aria-labelledby="generalDropdown">
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="profile.html">Profile</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="my-tasks.html">My tasks</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="projects.html">Projects</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="members.html">Members</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu -->
+                   <!-- </li>
+                    <!-- General -->
+
+                    <!-- Account Settings -->
+                   <!-- <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                        data-event="hover"
+                        data-animation-in="slideInUp"
+                        data-animation-out="fadeOut">
+                      <a id="accountSettingsDropdown" class="nav-link u-header__nav-link" href="javascript:;"
+                         aria-haspopup="true"
+                         aria-expanded="false"
+                         aria-labelledby="accountSettingsDropdown">
+                        Account settings
+                        <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                      </a>
+
+                      <!-- Submenu -->
+                     <!-- <ul id="accountSettingsDropdown" class="list-inline hs-sub-menu u-header__sub-menu py-lg-3 mb-0" style="min-width: 220px;"
+                          aria-labelledby="accountSettingsDropdown">
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="edit-profile.html">Edit profile</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="change-password.html">Change password</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="notifications.html">Notifications</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu -->
+                  <!--  </li>
+                    <!-- Account Settings -->
+
+                    <!-- Billing -->
+                   <!-- <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                        data-event="hover"
+                        data-animation-in="slideInUp"
+                        data-animation-out="fadeOut">
+                      <a id="billingDropdown" class="nav-link u-header__nav-link" href="javascript:;"
+                         aria-haspopup="true"
+                         aria-expanded="false"
+                         aria-labelledby="billingDropdown">
+                        Billing
+                        <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                      </a>
+
+                      <!-- Submenu -->
+                      <!--<ul id="billingDropdown" class="list-inline hs-sub-menu u-header__sub-menu py-lg-3 mb-0" style="min-width: 220px;"
+                          aria-labelledby="billingDropdown">
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="activity.html">Activity</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="payment-methods.html">Payment methods</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu -->
+                    <!--</li>
+                    <!-- Billing -->
+
+                    <!-- Accessibility -->
+                   <!-- <li class="nav-item hs-has-sub-menu u-header__nav-item"
+                        data-event="hover"
+                        data-animation-in="slideInUp"
+                        data-animation-out="fadeOut">
+                      <a id="accessibilityDropdown" class="nav-link u-header__nav-link" href="javascript:;"
+                         aria-haspopup="true"
+                         aria-expanded="false"
+                         aria-labelledby="accessibilityDropdown">
+                        Accessibility
+                        <span class="fa fa-angle-down u-header__nav-link-icon"></span>
+                      </a>
+
+                      <!-- Submenu -->
+                     <!-- <ul id="accessibilityDropdown" class="list-inline hs-sub-menu u-header__sub-menu py-lg-3 mb-0" style="min-width: 220px;"
+                          aria-labelledby="accessibilityDropdown">
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="invite-friends.html">Invite friends</a>
+                        </li>
+                        <li class="dropdown-item px-0">
+                          <a class="nav-link u-header__sub-menu-nav-link u-list__link px-4" href="api-token.html">API Token</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu -->
+                   <!-- </li>
+                    <!-- Accessibility -->
+
+                    <!-- Others -->
+                    <!--<li class="nav-item u-header__nav-item">
+                      <a class="nav-link u-header__nav-link" href="plans.html">Plans</a>
+                    </li>
+                    <!-- Others -->
+                <!--  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- End Navbar -->
+
+         <!-- <div class="ml-lg-auto">
+            <!-- Button -->
+           <!-- <a class="btn btn-sm u-btn-white--air transition-3d-hover" href="profile.html">View My Profile</a>
+            <!-- End Button -->
+         <!-- </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Breadcrumb Section -->
+
+    <!-- Content Section -->
+	  {% load widget_tweaks %}
+    <div class="u-bg-light-blue-50">
+      <div class="container u-space-2">
+        <!-- Avatar Form -->
+		  {% block content %}
+           <form method="post" enctype="multipart/form-data">
+			 {% csrf_token %}
+
+             {% for hidden_field in form.hidden_fields %}
+  {{ hidden_field }}
+{% endfor %}
+
+{% if form.non_field_errors %}
+  <div class="alert alert-danger" role="alert">
+    {% for error in form.non_field_errors %}
+      {{ error }}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% for field in form.visible_fields %}
+  <div class="form-group">
+    {{ field.label_tag }}
+
+    {% if form.is_bound %}
+
+        {% if field.errors %}
+	            {% if field.name == 'location' %}
+                     {% render_field form.location type="search" id="ranking-info"  placeholder="City, state, or zip"  aria-label="City, state, or zip" class="form-control is-invalid" %}
+	            {% endif %}
+	            {% if field.name != 'location' %}
+	                   {% render_field field class="form-control is-invalid" %}
+	             {% endif %}
+
+        {% for error in field.errors %}
+          <div class="invalid-feedback">
+            {{ error }}
+          </div>
+        {% endfor %}
+      {% else %}
+	        {% if field.name == 'location' %}
+                 {% render_field form.location type="search" id="ranking-info" placeholder="City, state, or zip" aria-label="City, state, or zip" class="form-control is-valid" %}
+            {% endif %}
+	        {% if field.name != 'location' %}
+               {% render_field field class="form-control is-valid" %}
+             {% endif %}
+      {% endif %}
+    {% else %}
+	  {% if field.name == 'location' %}
+           {% render_field form.location  type="search"  id="ranking-info"  placeholder="City, state, or zip"  aria-label="City, state, or zip" class="form-control" %}
+      {% endif %}
+	  {% if field.name != 'location' %}
+      {% render_field field class="form-control"   %}
+	  {% endif %}
+
+    {% endif %}
+
+    {% if field.help_text %}
+      <small class="form-text text-muted">{{ field.help_text }}</small>
+    {% endif %}
+  </div>
+{% endfor %}
+
+{% if user.is_authenticated %}
+
+             <button type="submit" class="btn btn-primary">Proceed</button>
+			   {% endif %}
+			   {% if user.is_authenticated == False %}
+			   <button type="submit" class="btn btn-primary">Signup</button>
+			   {% endif %}
+            </form>
+
+
+          {% endblock %}
+
+
+        <!-- End Avatar Form -->
+
+        <!-- Personal Info Form -->
+        <!--<form class="js-validate" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+          <div class="row">
+            <!-- Input -->
+           <!-- <div class="col-sm-6 mb-6">
+
+
+
+              <div class="js-form-message">
+
+
+
+
+
+
+                <label class="d-block small text-uppercase font-weight-medium">
+                  Name
+                  <span class="text-danger">*</span>
+                </label>
+
+                <div class="js-focus-state input-group u-form mb-2">
+                  <input class="form-control u-form__input" type="text" name="name" value="Natalie Curtis" required
+                         placeholder="Enter your name"
+                         aria-label="Enter your name"
+                         data-msg="Please enter your name."
+                         data-error-class="u-has-error"
+                         data-success-class="u-has-success">
+                </div>
+              </div>
+              <p class="small mb-0">Displayed on your job posts.</p>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+
+            <!-- End Input -->
+          <!--</div>
+
+
+
+
+
+          <!--<div class="row">
+            <!-- Input -->
+
+            <!-- End Input -->
+
+            <!-- Input -->
+           <!-- <div class="col-sm-6 mb-6">
+              <div class="js-form-message">
+                <label class="d-block small text-uppercase font-weight-medium">
+                  Location
+                  <span class="text-danger">*</span>
+                </label>
+
+                <div class="js-focus-state input-group u-form mb-2">
+                  <input class="form-control u-form__input" type="text" name="location" value="London, England" required
+                         placeholder="Enter your location"
+                         aria-label="Enter your location"
+                         data-msg="Please enter your location."
+                         data-error-class="u-has-error"
+                         data-success-class="u-has-success">
+                </div>
+              </div>
+            </div>
+            <!-- End Input -->
+          <!--</div>
+
+          <div class="row">
+            <!-- Input -->
+           <!-- <div class="col-sm-6 mb-6">
+              <div class="js-form-message">
+                <label class="d-block small text-uppercase font-weight-medium">
+                  Price
+                  <span class="text-danger">*</span>
+                </label>
+
+                <div class="js-focus-state input-group u-form mb-2">
+                  <input class="form-control u-form__input" type="number" name="Enter your price " value="Pixeel Ltd." required
+                         placeholder="Price"
+                         aria-label="Price"
+                         data-msg="Enter number"
+                         data-error-class="u-has-error"
+                         data-success-class="u-has-success">
+                </div>
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+
+            <!-- End Input -->
+         <!-- </div>
+
+
+
+          <hr class="mt-1 mb-7">
+
+          <!-- Title -->
+         <!-- <div class="mb-3">
+            <h2 class="h5 mb-0">Description</h2>
+            <p>About your Project</p>
+          </div>
+          <!-- End Title -->
+
+         <!-- <div class="mb-6">
+            <label class="d-block small text-uppercase font-weight-medium">
+              Job Details
+            </label>
+
+            <!-- Text Editor Input -->
+            <!--<div class="u-summernote-editor">
+              <div class="js-summernote-editor" data-height="160"></div>
+            </div>
+            <!-- End Text Editor Input -->
+         <!-- </div>
+
+          <div class="mb-6">
+            <label class="d-block small text-uppercase font-weight-medium">
+              Skills required
+            </label>
+
+            <!-- Tags Input -->
+           <!-- <div class="u-tagsinput">
+              <input type="text" value="Photographer" data-role="tagsinput">
+            </div>
+            <!-- End Tags Input -->
+        <!--  </div>
+           <label class="btn btn-sm btn-primary u-btn-primary transition-3d-hover u-file-attachment-btn" for="fileAttachmentBtn">
+                 Upload New Picture
+              <input id="fileAttachmentBtn" name="file-attachment" type="file" class="u-file-attachment-btn__label">
+              </label>
+
+
+             <button type="submit" class="btn btn-sm u-btn-secondary--air transition-3d-hover">Delete</button></div>
+
+          <!-- Buttons -->
+         <!-- <button type="submit" class="btn btn-sm btn-primary u-btn-primary transition-3d-hover">Post Job</button>
+          <button type="submit" class="btn btn-sm u-btn-secondary--air transition-3d-hover">Cancel</button>
+          <!-- End Buttons -->
+
+          <!--<hr class="my-7">
+
+          <!-- Title -->
+
+
+
+        <!--</form>
+        <!-- End Social Profiles Form -->
+      </div>
+    </div>
+    <!-- End Content Section -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <!-- Lists -->
+    <div class="container u-space-2">
+      <div class="row justify-content-md-between">
+        <div class="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+          <h3 class="h6">
+            <strong>About</strong>
+          </h3>
+
+          <!-- List -->
+          <ul class="list-unstyled mb-0">
+            <li><a class="u-list__link" href="../pages/about-agency.html">Agency</a></li>
+            <li><a class="u-list__link" href="../pages/about-start-up.html">Start-Up</a></li>
+            <li><a class="u-list__link" href="#">Business</a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+
+        <div class="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+          <h3 class="h6">
+            <strong>Services</strong>
+          </h3>
+
+          <!-- List -->
+          <ul class="list-unstyled mb-0">
+            <li><a class="u-list__link" href="../pages/services-agency.html">Agency</a></li>
+            <li><a class="u-list__link" href="../pages/services-start-up.html">Start-Up</a></li>
+            <li><a class="u-list__link" href="#">Business</a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+
+        <div class="col-sm-4 col-lg-2 mb-4 mb-lg-0">
+          <h3 class="h6">
+            <strong>Account</strong>
+          </h3>
+
+          <!-- List -->
+          <ul class="list-unstyled mb-0">
+            <li><a class="u-list__link" href="#">Profile</a></li>
+            <li><a class="u-list__link" href="#">User Contacts</a></li>
+            <li><a class="u-list__link" href="#">Projects</a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="h6 mb-4">
+            <strong>We are driven to deliver results for all your businesses.</strong>
+          </h3>
+
+          <!-- Button -->
+          <button type="button" class="btn btn-xs btn-dark u-btn-dark u-btn-wide transition-3d-hover text-left mb-2">
+            <span class="media align-items-center">
+              <span class="d-flex mr-3">
+                <span class="fab fa-apple font-size-26"></span>
+              </span>
+              <span class="media-body">
+                <span class="d-block">Download on the</span>
+                <strong class="font-size-14">App Store</strong>
+              </span>
+            </span>
+          </button>
+          <!-- End Button -->
+
+          <!-- Button -->
+          <button type="button" class="btn btn-xs btn-dark u-btn-dark u-btn-wide transition-3d-hover text-left mb-2">
+            <span class="media align-items-center">
+              <span class="d-flex mr-3">
+                <span class="fab fa-google-play font-size-26"></span>
+              </span>
+              <span class="media-body">
+                <span class="d-block">Get it on</span>
+                <strong class="font-size-14">Google Play</strong>
+              </span>
+            </span>
+          </button>
+          <!-- End Button -->
+        </div>
+      </div>
+    </div>
+    <!-- End Lists -->
+
+    <hr>
+
+    <!-- Copyright -->
+    <div class="container text-center u-space-1">
+      <!-- Logo -->
+      <a class="d-inline-block mb-2" href="../home/index.html" aria-label="Front">
+        <img src="{% static 'assets/svg/logos/logo.svg'%}" alt="Logo" style="width: 120px;">
+      </a>
+      <!-- End Logo -->
+
+      <p class="small text-muted">&copy; Front. 2018 Htmlstream. All rights reserved.</p>
+    </div>
+    <!-- End Copyright -->
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Account Sidebar Navigation -->
+  {% addtoblock "js" %}<script src="{% static 'djng/js/django-angular.min.js' %}" type="text/javascript"></script>{% endaddtoblock %}
+  <aside id="sidebarContent" class="u-sidebar u-unfold--css-animation u-unfold--hidden" aria-labelledby="sidebarNavToggler">
+    <div class="u-sidebar__scroller">
+      <div class="u-sidebar__container">
+        <div class="u-header-sidebar__footer-offset">
+          <!-- Toggle Button -->
+          <div class="d-flex align-items-center pt-4 px-7">
+            <button type="button" class="close ml-auto"
+                    aria-controls="sidebarContent"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    data-unfold-event="click"
+                    data-unfold-hide-on-scroll="false"
+                    data-unfold-target="#sidebarContent"
+                    data-unfold-type="css-animation"
+                    data-unfold-animation-in="fadeInRight"
+                    data-unfold-animation-out="fadeOutRight"
+                    data-unfold-duration="500">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- End Toggle Button -->
+{% load socialaccount %}
+    {% providers_media_js %}
+
+          <!-- Content -->
+          <div class="js-scrollbar u-sidebar__body">
+            <div class="u-sidebar__content u-header-sidebar__content">
+
+
+            {% if user.is_authenticated %}
+				<a class="btn btn-primary btn-block"  href="/logout/" >
+				logout
+			    </a>
+
+
+              <div class="ml-3">
+                <strong>{{ user.username }} <span class="badge u-badge-success ml-1">Pro</span></strong>
+                <span class="u-sidebar--account__holder-text"></span>
+              </div>
+				{% else %}
+				<a class="btn btn-primary btn-block"  href="/login/" >
+				login
+			    </a>
+		     <a href="{% provider_login_url  "facebook" method="js_sdk" %}" class="btn btn-primary btn-block btn-social btn-facebook" style="text-align:center">
+             <span class="fa fa-facebook"></span>
+              Login with Facebook
+              </a>
+				<a class="btn btn-primary btn-block"  href="/register/" >
+				Signup
+			</a>
+				{% endif %}
+
+
+
+
+		</li>
+		{% if password_reset_url or register_customer_url %}
+		<li role="separator" class="divider"></li>
+			{% if password_reset_url %}
+		<li><a href="{{ password_reset_url }}">{% trans "Password Forgotten?" %}</a></li>
+			{% endif %}
+			{% if register_customer_url %}
+		<li><a href="{{ register_customer_url }}">{% trans "Register Yourself" %}</a></li>
+			{% endif %}
+		{% endif %}
+	    </ul>
+
+
+           <!-- <form class="js-validate" name="{{ form_name }}" djng-endpoint="{% url 'shop:login' %}" role="form" novalidate>
+
+                <!-- Login -->
+                <!--<div id="login" data-target-group="idForm">
+                  <!-- Title -->
+                 <!-- <header class="text-center mb-7">
+                    <h2 class="h4 mb-0">Welcome Back!</h2>
+                    <p>Login to manage your account.</p>
+                  </header>
+                  <!-- End Title -->
+
+                  <!-- Input -->
+                  <!--<div class="js-form-message mb-4">
+                    <div class="js-focus-state input-group u-form">
+                      <div class="input-group-prepend u-form__prepend">
+                        <span class="input-group-text u-form__text">
+                          <span class="fa fa-user u-form__text-inner"></span>
+                        </span>
+                      </div>
+                      <input type="email" class="form-control u-form__input" name="email" required
+                             placeholder="Email"
+                             aria-label="Email"
+                             data-msg="Please enter a valid email address."
+                             data-error-class="u-has-error"
+							 data-success-class="u-has-success">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <!-- Input -->
+                 <!-- <div class="js-form-message mb-2">
+                    <div class="js-focus-state input-group u-form">
+                      <div class="input-group-prepend u-form__prepend">
+                        <span class="input-group-text u-form__text">
+                          <span class="fa fa-lock u-form__text-inner"></span>
+                        </span>
+                      </div>
+                      <input type="password" class="form-control u-form__input" name="password" required
+                             placeholder="Password"
+                             aria-label="Password"
+                             data-msg="Your password is invalid. Please try again."
+                             data-error-class="u-has-error"
+                             data-success-class="u-has-success">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                 <!-- <div class="clearfix mb-4">
+                    <a class="js-animation-link float-right small u-link-muted" href="javascript:;"
+                       data-target="#forgotPassword"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Forgot Password?</a>
+                  </div>
+
+                  <div class="mb-2">
+                    <button type="submit" class="btn btn-block btn-primary u-btn-primary transition-3d-hover">Login</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Do not have an account?</span>
+                    <a class="js-animation-link small" href="javascript:;"
+                       data-target="#signup"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Signup
+                    </a>
+                  </div>
+
+                  <div class="text-center">
+                    <span class="u-divider u-divider--xs u-divider--text mb-4">OR</span>
+                  </div>
+
+                  <!-- Login Buttons -->
+                 <!-- <div class="d-flex">
+                    <a class="btn btn-block btn-sm u-btn-facebook--air transition-3d-hover mr-1" href="#">
+                      <span class="fab fa-facebook-square mr-1"></span>
+                      Facebook
+                    </a>
+                    <a class="btn btn-block btn-sm u-btn-google--air transition-3d-hover ml-1 mt-0" href="#">
+                      <span class="fab fa-google mr-1"></span>
+                      Google
+                    </a>
+                  </div>
+                  <!-- End Login Buttons -->
+                </div>
+
+                <!-- Signup -->
+                <div id="signup" style="display: none; opacity: 0;" data-target-group="idForm">
+                  <!-- Title -->
+                  <header class="text-center mb-7">
+                    <h2 class="h4 mb-0">Welcome to Front.</h2>
+                    <p>Fill out the form to get started.</p>
+                  </header>
+                  <!-- End Title -->
+
+                  <!-- Input -->
+                  <div class="js-form-message mb-4">
+                    <div class="js-focus-state input-group u-form">
+                      <div class="input-group-prepend u-form__prepend">
+                        <span class="input-group-text u-form__text">
+                          <span class="fa fa-user u-form__text-inner"></span>
+                        </span>
+                      </div>
+                      <input type="email" class="form-control u-form__input" name="email" required
+                             placeholder="Email"
+                             aria-label="Email"
+                             data-msg="Please enter a valid email address."
+                             data-error-class="u-has-error"
+                             data-success-class="u-has-success">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <!-- Input -->
+                  <div class="js-form-message mb-4">
+                    <div class="js-focus-state input-group u-form">
+                      <div class="input-group-prepend u-form__prepend">
+                        <span class="input-group-text u-form__text">
+                          <span class="fa fa-lock u-form__text-inner"></span>
+                        </span>
+                      </div>
+                      <input type="password" class="form-control u-form__input" name="password" required
+                             placeholder="Password"
+                             aria-label="Password"
+                             data-msg="Your password is invalid. Please try again."
+                             data-error-class="u-has-error"
+                             data-success-class="u-has-success">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <!-- Input -->
+                  <div class="js-form-message mb-4">
+                    <div class="js-focus-state input-group u-form">
+                      <div class="input-group-prepend u-form__prepend">
+                        <span class="input-group-text u-form__text">
+                          <span class="fa fa-key u-form__text-inner"></span>
+                        </span>
+                      </div>
+                      <input type="password" class="form-control u-form__input" name="confirmPassword" required
+                             placeholder="Confirm Password"
+                             aria-label="Confirm Password"
+                             data-msg="Password does not match the confirm password."
+                             data-error-class="u-has-error"
+                             data-success-class="u-has-success">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <div class="mb-2">
+                    <button type="submit" class="btn btn-block btn-primary u-btn-primary transition-3d-hover">Get Started</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Already have an account?</span>
+                    <a class="js-animation-link small" href="javascript:;"
+                       data-target="#login"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Login
+                    </a>
+                  </div>
+
+                  <div class="text-center">
+                    <span class="u-divider u-divider--xs u-divider--text mb-4">OR</span>
+                  </div>
+
+                  <!-- Login Buttons -->
+                  <div class="d-flex">
+                    <a class="btn btn-block btn-sm u-btn-facebook--air transition-3d-hover mr-1" href="#">
+                      <span class="fab fa-facebook-square mr-1"></span>
+                      Facebook
+                    </a>
+                    <a class="btn btn-block btn-sm u-btn-google--air transition-3d-hover ml-1 mt-0" href="#">
+                      <span class="fab fa-google mr-1"></span>
+                      Google
+                    </a>
+                  </div>
+                  <!-- End Login Buttons -->
+                </div>
+                <!-- End Signup -->
+
+                <!-- Forgot Password -->
+                <div id="forgotPassword" style="display: none; opacity: 0;" data-target-group="idForm">
+                  <!-- Title -->
+                  <header class="text-center mb-7">
+                    <h2 class="h4 mb-0">Recover Password.</h2>
+                    <p>Enter your email address and an email with instructions will be sent to you.</p>
+                  </header>
+                  <!-- End Title -->
+
+                  <!-- Input -->
+                  <div class="js-form-message mb-4">
+                    <div class="js-focus-state input-group u-form">
+                      <div class="input-group-prepend u-form__prepend">
+                        <span class="input-group-text u-form__text">
+                          <span class="fas fa-envelope u-inner-form__text"></span>
+                        </span>
+                      </div>
+                      <input type="email" class="form-control u-form__input" name="email" required
+                             placeholder="Your email"
+                             aria-label="Your email"
+                             data-msg="Please enter a valid email address."
+                             data-error-class="u-has-error"
+                             data-success-class="u-has-success">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <div class="mb-2">
+                    <button type="submit" class="btn btn-block btn-primary u-btn-primary transition-3d-hover">Recover Password</button>
+                  </div>
+
+                  <div class="text-center mb-4">
+                    <span class="small text-muted">Remember your password?</span>
+                    <a class="js-animation-link small" href="javascript:;"
+                       data-target="#login"
+                       data-link-group="idForm"
+                       data-animation-in="slideInUp">Login
+                    </a>
+                  </div>
+                </div>
+                <!-- End Forgot Password -->
+              </form>
+
+
+
+
+
+
+            </div>
+          </div>
+          <!-- End Content -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="u-sidebar__footer u-sidebar__footer--account">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item pr-3">
+              <a class="u-sidebar__footer--account__text" href="../pages/privacy.html">Privacy</a>
+            </li>
+            <li class="list-inline-item pr-3">
+              <a class="u-sidebar__footer--account__text" href="../pages/terms.html">Terms</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="u-sidebar__footer--account__text" href="../pages/help.html">
+                <i class="fa fa-info-circle"></i>
+              </a>
+            </li>
+          </ul>
+
+          <!-- SVG Background Shape -->
+          <div class="position-absolute-bottom-0">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 300 126.5" style="margin-bottom: -5px; enable-background:new 0 0 300 126.5;" xml:space="preserve">
+              <path class="u-fill-primary" opacity=".6" d="M0,58.9c0-0.9,5.1-2,5.8-2.2c6-0.8,11.8,2.2,17.2,4.6c4.5,2.1,8.6,5.3,13.3,7.1C48.2,73.3,61,73.8,73,69
+                c43-16.9,40-7.9,84-2.2c44,5.7,83-31.5,143-10.1v69.8H0C0,126.5,0,59,0,58.9z"/>
+              <path class="u-fill-primary" d="M300,68.5v58H0v-58c0,0,43-16.7,82,5.6c12.4,7.1,26.5,9.6,40.2,5.9c7.5-2.1,14.5-6.1,20.9-11
+                c6.2-4.7,12-10.4,18.8-13.8c7.3-3.8,15.6-5.2,23.6-5.2c16.1,0.1,30.7,8.2,45,16.1c13.4,7.4,28.1,12.2,43.3,11.2
+                C282.5,76.7,292.7,74.4,300,68.5z"/>
+              <circle class="u-fill-danger" cx="259.5" cy="17" r="13"/>
+              <circle class="u-fill-primary" cx="290" cy="35.5" r="8.5"/>
+              <circle class="u-fill-success" cx="288" cy="5.5" r="5.5"/>
+              <circle class="u-fill-warning" cx="232.5" cy="34" r="2"/>
+            </svg>
+          </div>
+          <!-- End SVG Background Shape -->
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </div>
+  </aside>
+  <!-- End Account Sidebar Navigation -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- Go to Top -->
+  <a class="js-go-to u-go-to" href="#"
+    data-position='{"bottom": 15, "right": 15 }'
+    data-type="fixed"
+    data-offset-top="400"
+    data-compensation="#header"
+    data-show-effect="slideInUp"
+    data-hide-effect="slideOutDown">
+    <span class="fa fa-arrow-up u-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+{% render_block "js"  %}
+  <!-- JS Global Compulsory -->
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/popper.js/dist/umd/popper.min.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/bootstrap/bootstrap.min.js' %}"></script>{% endaddtoblock %}
+
+  <!-- JS Implementing Plugins -->
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/hs-megamenu/src/hs.megamenu.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/jquery-validation/dist/jquery.validate.min.js' %}"></script>{% endaddtoblock %}
+ {% addtoblock "js" %} <script src="{% static 'assets/vendor/summernote/dist/summernote-bs4.min.js' %}"></script>{% endaddtoblock %}
+ {% addtoblock "js" %} <script src="{% static 'assets/vendor/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/vendor/flatpickr/dist/flatpickr.min.js' %}"></script>{% endaddtoblock %}
+
+  <!-- JS Front -->
+  {% addtoblock "js" %}<script src="{% static 'assets/js/hs.core.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.header.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.unfold.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.malihu-scrollbar.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/helpers/hs.focus-state.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.validation.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.summernote-editor.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.range-datepicker.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="{% static 'assets/js/components/hs.go-to.js' %}"></script>{% endaddtoblock %}
+  {% addtoblock "js" %}<script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>{% endaddtoblock %}
+   {% block js %}
+  <!-- JS Plugins Init. -->
+  <script>
+    $(window).on('load', function () {
+      // initialization of HSMegaMenu component
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 767,
+        hideTimeOut: 0
+      });
+
+      // initialization of HSMegaMenu component
+      $('.js-breadcrumb-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 991,
+        hideTimeOut: 0
+      });
+    });
+
+    $(document).on('ready', function () {
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+        afterOpen: function () {
+          $(this).find('input[type="search"]').focus();
+        }
+      });
+
+      // initialization of malihu scrollbar
+      $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+
+      // initialization of forms
+      $.HSCore.helpers.HSFocusState.init();
+
+      // initialization of form validation
+      $.HSCore.components.HSValidation.init('.js-validate', {
+        rules: {
+          confirmPassword: {
+            equalTo: '#password'
+          }
+        }
+      });
+
+      // initialization of text editors
+      $.HSCore.components.HSSummernoteEditor.init('.js-summernote-editor');
+
+      // initialization of range datepicker
+      $.HSCore.components.HSRangeDatepicker.init('.js-range-datepicker');
+
+      // initialization of go to
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+     (function() {
+  function formatIcon(query) {
+    switch (query) {
+      case "worldwide_query":
+        // globe icon - result found while searching in the whole world (still respects filter restrictions)
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zM9 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L7 13v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H6V8h2c.55 0 1-.45 1-1V5h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>'
+      case "local_query":
+        // building icon - result found while searching in the country of the user (still respects filter restrictions)
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 .6L2.5 6.9h18.9L12 .6zM3.8 8.2c-.7 0-1.3.6-1.3 1.3v8.8L.3 22.1c-.2.3-.3.5-.3.6 0 .6.8.6 1.3.6h21.5c.4 0 1.3 0 1.3-.6 0-.2-.1-.3-.3-.6l-2.2-3.8V9.5c0-.7-.6-1.3-1.3-1.3H3.8zm2.5 2.5c.7 0 1.1.6 1.3 1.3v7.6H5.1V12c0-.7.5-1.3 1.2-1.3zm5.7 0c.7 0 1.3.6 1.3 1.3v7.6h-2.5V12c-.1-.7.5-1.3 1.2-1.3zm5.7 0c.7 0 1.3.6 1.3 1.3v7.6h-2.5V12c-.1-.7.5-1.3 1.2-1.3z"/></svg>'
+      case "geo_query":
+        // pin icon - result found while searching near location of the user (still respects filter restrictions)
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 20"><path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5C5.62 9.5 4.5 8.38 4.5 7S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z"/></svg>'
+      default:
+        return '';
+    }
+  }
+
+  function formatName (highlight) {
+    var name = highlight.name;
+    return name;
+  }
+
+  function formatAddress (address) {
+    var suburb = address.suburb;
+    var city = address.city;
+    var postcode = address.postcode;
+    var administrative = address.administrative;
+    var country = address.country;
+    return [ suburb, city, postcode, administrative, country ]
+      .filter(function(v) { return !!v })
+      .join(', ')
+  }
+
+  function formatPrecision (type, roadNumberPrecision) {
+    if (type === 'city') {
+      // 0 circle - city level precision
+      return '';
+    }
+
+    switch (roadNumberPrecision) {
+      case "exact":
+        // 3 circles - house level precision
+        return '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+  '<circle r="12" cy="16" cx="16" fill="#ddd"/>' +
+  '<circle r="8" cy="16" cx="16" fill="#aaa"/>' +
+  '<circle r="4" cy="16" cx="16" fill="#000"/>' +
+'</svg>';
+      case "closest":
+        // 2 circles - house number not found - returned geolocation of the closest house number.
+        return '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+  '<circle r="12" cy="16" cx="16" fill="#ddd"/>' +
+  '<circle r="8" cy="16" cx="16" fill="#aaa"/>' +
+'</svg>';
+      default:
+        // 1 circle - street level precision
+        return '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+  '<circle r="12" cy="16" cx="16" fill="#ddd"/>' +
+'</svg>';
+    }
+  }
+
+  function formatSuggestion (suggestion) {
+    var highlight = suggestion.highlight;
+    var _rankingInfo = suggestion.hit._rankingInfo;
+    var type = suggestion.type;
+
+    return '<div class="suggestion">' +
+      '<span class="suggestion-icon">' + formatIcon(_rankingInfo.query) + '</span>' +
+      '<span class="suggestion-name">' + formatName(highlight) + '</span>' +
+      '<span class="suggestion-address">' + formatAddress(highlight) + '</span>' +
+      '<span class="suggestion-precision">' + formatPrecision(type, _rankingInfo.roadNumberPrecision) + '</span>' +
+    '</div>'
+  }
+
+  var placesAutocomplete = places({
+    appId: 'pl1AKTQR328T',
+    apiKey: '3c96460cb91f2915ffe65c37874c4f75',
+    container: document.querySelector('#ranking-info'),
+    templates: {
+      suggestion: formatSuggestion
+    }
+  }).configure({
+    getRankingInfo: true
+  });
+})();
+
+
+  </script>
+{% endblock js %}
+</body>
+</html>

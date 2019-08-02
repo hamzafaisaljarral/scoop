@@ -1,0 +1,11 @@
+{% load cms_tags i18n %}
+{% page_url "new-scoop" as create_scoop_url %}
+{% if create_scoop_url %}
+    {% page_attribute 'menu_title' 'new-scoop' as tooltip %}
+{% else %}
+    {% url "new-scoop" as create_scoop_url %}
+    {% trans "Create Scoop" as tooltip %}
+{% endif %}
+{% if create_scoop_url %}
+<li><a href="{{ create_scoop_url }}" title="{{ tooltip }}"><button type="button" class="btn btn-success" uib-tooltip="{{ tooltip }}">Create Scoop </button></a></li>
+{% endif %}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/paginator.css",
+	"sources": [
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/paginator.scss",
+		"../../../Users/hamzafaisal/Public/ScoopInside/django-shop/shop/static/shop/css/_spinner.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,eAAe,CAAC;EACf,iBAAiB,EAAE,2BAA2B;EAC9C,SAAS,EAAE,2BAA2B,GACtC;;AACD,kBAAkB,CAAlB,IAAkB;EACjB,AAAA,EAAE;IACD,iBAAiB,EAAE,YAAY;IAC/B,SAAS,EAAE,YAAY;EAExB,AAAA,IAAI;IACH,iBAAiB,EAAE,cAAc;IACjC,SAAS,EAAE,cAAc;;AAG3B,UAAU,CAAV,IAAU;EACT,AAAA,EAAE;IACD,iBAAiB,EAAE,YAAY;IAC/B,SAAS,EAAE,YAAY;EAExB,AAAA,IAAI;IACH,iBAAiB,EAAE,cAAc;IACjC,SAAS,EAAE,cAAc"
+}
