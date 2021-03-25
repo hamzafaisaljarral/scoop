@@ -89,7 +89,7 @@ premailer==3.2.0
 python-dateutil==2.6.0
 python-openid==2.2.5
 pytz==2015.7
-PyYAML==3.13
+PyYAML==5.4
 rcssmin==1.0.6
 redis==2.10.6
 requests==2.18.4
