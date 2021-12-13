@@ -78,7 +78,7 @@ jmespath==0.9.3
 jsonfield==1.0.3
 jsonschema==2.6.0
 libsass==0.12.3
-lxml==4.2.5
+lxml==4.6.5
 oauthlib==1.0.3
 odfpy==1.4.0
 olefile==0.46
