@@ -84,7 +84,7 @@ odfpy==1.4.0
 olefile==0.46
 openpyxl==2.4.9
 pathspec==0.5.5
-Pillow==4.3.0
+Pillow==9.0.1
 premailer==3.2.0
 python-dateutil==2.6.0
 python-openid==2.2.5
